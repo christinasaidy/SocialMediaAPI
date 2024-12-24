@@ -20,16 +20,22 @@ namespace SocialMediaAPI.infrastructure.Repositories
         public async Task<Votes> GetVoteByIdAsync(int id)
         {
             return await _context.Votes
-                .Include(v => v.Post)  // Eager load related Post
-                .Include(v => v.User)  // Eager load related User
+                .Include(v => v.Post)
+                    .ThenInclude(p => p.Author) // Eager load the Author of the Post
+                .Include(v => v.Post)
+                    .ThenInclude(p => p.Category) // Eager load the Category of the Post
+                .Include(v => v.User) // Eager load the User who cast the vote
                 .FirstOrDefaultAsync(v => v.Id == id);
         }
 
         public async Task<IEnumerable<Votes>> GetAllVotesAsync()
         {
             return await _context.Votes
-                .Include(v => v.Post)  // Eager load related Post
-                .Include(v => v.User)  // Eager load related User
+                .Include(v => v.Post)
+                    .ThenInclude(p => p.Author) // Eager load the Author of the Post
+                .Include(v => v.Post)
+                    .ThenInclude(p => p.Category) // Eager load the Category of the Post
+                .Include(v => v.User) // Eager load the User who cast the vote
                 .ToListAsync();
         }
 
@@ -37,7 +43,11 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Votes
                 .Where(v => v.PostId == postId)
-                .Include(v => v.User)  // Eager load related User
+                .Include(v => v.Post)
+                    .ThenInclude(p => p.Author) // Eager load the Author of the Post
+                .Include(v => v.Post)
+                    .ThenInclude(p => p.Category) // Eager load the Category of the Post
+                .Include(v => v.User) // Eager load the User who cast the vote
                 .ToListAsync();
         }
 
@@ -45,7 +55,11 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Votes
                 .Where(v => v.UserId == userId)
-                .Include(v => v.Post)  // Eager load related Post
+                .Include(v => v.Post)
+                    .ThenInclude(p => p.Author) // Eager load the Author of the Post
+                .Include(v => v.Post)
+                    .ThenInclude(p => p.Category) // Eager load the Category of the Post
+                .Include(v => v.User) // Eager load the User who cast the vote
                 .ToListAsync();
         }
 

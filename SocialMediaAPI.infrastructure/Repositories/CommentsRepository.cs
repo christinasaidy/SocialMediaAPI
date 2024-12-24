@@ -20,16 +20,22 @@ namespace SocialMediaAPI.infrastructure.Repositories
         public async Task<Comments> GetCommentByIdAsync(int id)
         {
             return await _context.Comments
-                .Include(c => c.Post)  
-                .Include(c => c.User)  
+                .Include(c => c.Post)
+                    .ThenInclude(p => p.Author) // Eagerly load Post.Author
+                .Include(c => c.Post)
+                    .ThenInclude(p => p.Category) // Eagerly load Post.Category
+                .Include(c => c.User) // Eagerly load User
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public async Task<IEnumerable<Comments>> GetAllCommentsAsync()
         {
             return await _context.Comments
-                .Include(c => c.Post)  
-                .Include(c => c.User)  
+                .Include(c => c.Post)
+                    .ThenInclude(p => p.Author) // Eagerly load Post.Author
+                .Include(c => c.Post)
+                    .ThenInclude(p => p.Category) // Eagerly load Post.Category
+                .Include(c => c.User) // Eagerly load User
                 .ToListAsync();
         }
 
@@ -37,7 +43,11 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Comments
                 .Where(c => c.PostId == postId)
-                .Include(c => c.User)  
+                .Include(c => c.Post)
+                    .ThenInclude(p => p.Author) // Eagerly load Post.Author
+                .Include(c => c.Post)
+                    .ThenInclude(p => p.Category) // Eagerly load Post.Category
+                .Include(c => c.User) // Eagerly load User
                 .ToListAsync();
         }
 
@@ -45,7 +55,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Comments
                 .Where(c => c.UserId == userId)
-                .Include(c => c.Post)  
+                .Include(c => c.Post)
+                    .ThenInclude(p => p.Author) // Eagerly load Post.Author
+                .Include(c => c.Post)
+                    .ThenInclude(p => p.Category) // Eagerly load Post.Category
                 .ToListAsync();
         }
 
@@ -53,14 +66,14 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             await _context.Comments.AddAsync(comment);
             await _context.SaveChangesAsync();
-            return comment; 
+            return comment;
         }
 
         public async Task<Comments> UpdateCommentAsync(Comments comment)
         {
             _context.Comments.Update(comment);
             await _context.SaveChangesAsync();
-            return comment; 
+            return comment;
         }
 
         public async Task DeleteCommentAsync(int id)

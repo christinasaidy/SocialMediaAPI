@@ -90,3 +90,4 @@ C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.API\obj\Debug\net8.0\ref
 C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.API\obj\Debug\net8.0\SocialMedia.API.pdb
 C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.API\obj\Debug\net8.0\SocialMedia.API.genruntimeconfig.cache
 C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.API\obj\Debug\net8.0\ref\SocialMedia.API.dll
+C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.API\obj\Debug\net8.0\SocialMedia.API.sourcelink.json

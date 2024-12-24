@@ -15,3 +15,4 @@ C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.infrastructure\obj\De
 C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.infrastructure\obj\Debug\net8.0\refint\SocialMediaAPI.infrastructure.dll
 C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.infrastructure\obj\Debug\net8.0\SocialMediaAPI.infrastructure.pdb
 C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.infrastructure\obj\Debug\net8.0\ref\SocialMediaAPI.infrastructure.dll
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.infrastructure\obj\Debug\net8.0\SocialMediaAPI.infrastructure.sourcelink.json

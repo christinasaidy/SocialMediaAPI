@@ -3,6 +3,7 @@ using SocialMediaAPI.domain.entities;
 using SocialMediaAPI.infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace SocialMediaAPI.infrastructure.Repositories
@@ -18,18 +19,23 @@ namespace SocialMediaAPI.infrastructure.Repositories
 
         public async Task<Notifications> GetNotificationByIdAsync(int id)
         {
-            return await _context.Notifications.FirstOrDefaultAsync(n => n.Id == id);
+            return await _context.Notifications
+                .Include(n => n.Recipient) // Eager load the recipient (User)
+                .FirstOrDefaultAsync(n => n.Id == id);
         }
 
         public async Task<IEnumerable<Notifications>> GetAllNotificationsAsync()
         {
-            return await _context.Notifications.ToListAsync();
+            return await _context.Notifications
+                .Include(n => n.Recipient) // Eager load the recipient (User)
+                .ToListAsync();
         }
 
         public async Task<IEnumerable<Notifications>> GetNotificationsByUserIdAsync(int userId)
         {
             return await _context.Notifications
                 .Where(n => n.UserId == userId)
+                .Include(n => n.Recipient) // Eager load the recipient (User)
                 .ToListAsync();
         }
 
@@ -37,14 +43,14 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             await _context.Notifications.AddAsync(notification);
             await _context.SaveChangesAsync();
-            return notification; 
+            return notification;
         }
 
         public async Task<Notifications> UpdateNotificationAsync(Notifications notification)
         {
             _context.Notifications.Update(notification);
             await _context.SaveChangesAsync();
-            return notification; 
+            return notification;
         }
 
         public async Task DeleteNotificationAsync(int id)

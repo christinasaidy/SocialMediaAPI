@@ -9,3 +9,4 @@ C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.domain\obj\Debug\net8.0\
 C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.domain\obj\Debug\net8.0\refint\SocialMediaAPI.domain.dll
 C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.domain\obj\Debug\net8.0\SocialMediaAPI.domain.pdb
 C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.domain\obj\Debug\net8.0\ref\SocialMediaAPI.domain.dll
+C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.domain\obj\Debug\net8.0\SocialMediaAPI.domain.sourcelink.json
