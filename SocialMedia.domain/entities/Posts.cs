@@ -7,7 +7,7 @@ public class Posts
 
     public int CategoryId { get; set; }
 
-    public int UserId { get; set; } // This is the foreign key for the Author
+    public int UserId { get; set; } 
 
     public string Title { get; set; } = string.Empty;
 
@@ -27,5 +27,5 @@ public class Posts
     public Users Author { get; set; }
 
     [ForeignKey("CategoryId")]
-    public Categories Category { get; set; } // Navigation property to Category
+    public Categories Category { get; set; } 
 }

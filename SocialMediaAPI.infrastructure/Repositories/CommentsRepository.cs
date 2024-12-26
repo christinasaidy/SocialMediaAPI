@@ -21,10 +21,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Comments
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Author) // Eagerly load Post.Author
+                    .ThenInclude(p => p.Author) 
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Category) // Eagerly load Post.Category
-                .Include(c => c.User) // Eagerly load User
+                    .ThenInclude(p => p.Category)
+                .Include(c => c.User) 
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
@@ -32,10 +32,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Comments
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Author) // Eagerly load Post.Author
+                    .ThenInclude(p => p.Author) 
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Category) // Eagerly load Post.Category
-                .Include(c => c.User) // Eagerly load User
+                    .ThenInclude(p => p.Category) 
+                .Include(c => c.User) 
                 .ToListAsync();
         }
 
@@ -44,10 +44,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return await _context.Comments
                 .Where(c => c.PostId == postId)
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Author) // Eagerly load Post.Author
+                    .ThenInclude(p => p.Author) 
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Category) // Eagerly load Post.Category
-                .Include(c => c.User) // Eagerly load User
+                    .ThenInclude(p => p.Category) 
+                .Include(c => c.User) 
                 .ToListAsync();
         }
 
@@ -56,9 +56,9 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return await _context.Comments
                 .Where(c => c.UserId == userId)
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Author) // Eagerly load Post.Author
+                    .ThenInclude(p => p.Author) 
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Category) // Eagerly load Post.Category
+                    .ThenInclude(p => p.Category) 
                 .ToListAsync();
         }
 

@@ -15,7 +15,6 @@ namespace SocialMedia.API.Controllers
             _postsService = postsService;
         }
 
-        // GET: api/Posts/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPostById(int id)
         {
@@ -25,7 +24,6 @@ namespace SocialMedia.API.Controllers
             return Ok(post);
         }
 
-        // GET: api/Posts/Category/{categoryId}
         [HttpGet("Category/{categoryId}")]
         public async Task<IActionResult> GetPostsByCategoryId(int categoryId)
         {
@@ -33,7 +31,6 @@ namespace SocialMedia.API.Controllers
             return Ok(posts);
         }
 
-        // GET: api/Posts/User/{userId}
         [HttpGet("User/{userId}")]
         public async Task<IActionResult> GetPostsByUserId(int userId)
         {
@@ -41,7 +38,6 @@ namespace SocialMedia.API.Controllers
             return Ok(posts);
         }
 
-        // POST: api/Posts
         [HttpPost]
         public async Task<IActionResult> AddPost([FromBody] Posts post)
         {
@@ -52,7 +48,7 @@ namespace SocialMedia.API.Controllers
             return CreatedAtAction(nameof(GetPostById), new { id = createdPost.Id }, createdPost);
         }
 
-        // PUT: api/Posts/{id}
+      
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdatePost(int id, [FromBody] Posts post)
         {

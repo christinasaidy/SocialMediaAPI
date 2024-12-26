@@ -20,14 +20,14 @@ namespace SocialMediaAPI.infrastructure.Repositories
         public async Task<Notifications> GetNotificationByIdAsync(int id)
         {
             return await _context.Notifications
-                .Include(n => n.Recipient) // Eager load the recipient (User)
+                .Include(n => n.Recipient)  
                 .FirstOrDefaultAsync(n => n.Id == id);
         }
 
         public async Task<IEnumerable<Notifications>> GetAllNotificationsAsync()
         {
             return await _context.Notifications
-                .Include(n => n.Recipient) // Eager load the recipient (User)
+                .Include(n => n.Recipient) 
                 .ToListAsync();
         }
 
@@ -35,7 +35,7 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Notifications
                 .Where(n => n.UserId == userId)
-                .Include(n => n.Recipient) // Eager load the recipient (User)
+                .Include(n => n.Recipient) 
                 .ToListAsync();
         }
 

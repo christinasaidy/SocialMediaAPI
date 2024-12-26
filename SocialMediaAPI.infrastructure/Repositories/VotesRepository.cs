@@ -21,10 +21,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Votes
                 .Include(v => v.Post)
-                    .ThenInclude(p => p.Author) // Eager load the Author of the Post
+                    .ThenInclude(p => p.Author) 
                 .Include(v => v.Post)
-                    .ThenInclude(p => p.Category) // Eager load the Category of the Post
-                .Include(v => v.User) // Eager load the User who cast the vote
+                    .ThenInclude(p => p.Category) 
+                .Include(v => v.User) 
                 .FirstOrDefaultAsync(v => v.Id == id);
         }
 
@@ -32,10 +32,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Votes
                 .Include(v => v.Post)
-                    .ThenInclude(p => p.Author) // Eager load the Author of the Post
+                    .ThenInclude(p => p.Author) 
                 .Include(v => v.Post)
-                    .ThenInclude(p => p.Category) // Eager load the Category of the Post
-                .Include(v => v.User) // Eager load the User who cast the vote
+                    .ThenInclude(p => p.Category) 
+                .Include(v => v.User) 
                 .ToListAsync();
         }
 
@@ -44,10 +44,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return await _context.Votes
                 .Where(v => v.PostId == postId)
                 .Include(v => v.Post)
-                    .ThenInclude(p => p.Author) // Eager load the Author of the Post
+                    .ThenInclude(p => p.Author) 
                 .Include(v => v.Post)
-                    .ThenInclude(p => p.Category) // Eager load the Category of the Post
-                .Include(v => v.User) // Eager load the User who cast the vote
+                    .ThenInclude(p => p.Category)
+                .Include(v => v.User)
                 .ToListAsync();
         }
 
@@ -56,10 +56,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return await _context.Votes
                 .Where(v => v.UserId == userId)
                 .Include(v => v.Post)
-                    .ThenInclude(p => p.Author) // Eager load the Author of the Post
+                    .ThenInclude(p => p.Author) 
                 .Include(v => v.Post)
-                    .ThenInclude(p => p.Category) // Eager load the Category of the Post
-                .Include(v => v.User) // Eager load the User who cast the vote
+                    .ThenInclude(p => p.Category) 
+                .Include(v => v.User) 
                 .ToListAsync();
         }
 
@@ -67,14 +67,14 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             await _context.Votes.AddAsync(vote);
             await _context.SaveChangesAsync();
-            return vote; // Return the added vote
+            return vote; 
         }
 
         public async Task<Votes> UpdateVoteAsync(Votes vote)
         {
             _context.Votes.Update(vote);
             await _context.SaveChangesAsync();
-            return vote; // Return the updated vote
+            return vote; 
         }
 
         public async Task DeleteVoteAsync(int id)

@@ -3,20 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{822F8CB9-127C-4AD2-8D60-C7B1A3810866}|SocialMedia.API\\SocialMedia.API.csproj|c:\\users\\saidy\\source\\repos\\socialmediatest\\socialmedia.api\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822F8CB9-127C-4AD2-8D60-C7B1A3810866}|SocialMedia.API\\SocialMedia.API.csproj|solutionrelative:socialmedia.api\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9C9CE7AD-9EC1-4954-96CD-5DF3282B88D2}|SocialMediaAPI.infrastructure\\SocialMediaAPI.infrastructure.csproj|c:\\users\\saidy\\source\\repos\\socialmediatest\\socialmediaapi.infrastructure\\repositories\\commentsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C9CE7AD-9EC1-4954-96CD-5DF3282B88D2}|SocialMediaAPI.infrastructure\\SocialMediaAPI.infrastructure.csproj|solutionrelative:socialmediaapi.infrastructure\\repositories\\commentsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{822F8CB9-127C-4AD2-8D60-C7B1A3810866}|SocialMedia.API\\SocialMedia.API.csproj|c:\\users\\saidy\\source\\repos\\socialmediatest\\socialmedia.api\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822F8CB9-127C-4AD2-8D60-C7B1A3810866}|SocialMedia.API\\SocialMedia.API.csproj|solutionrelative:socialmedia.api\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C9CE7AD-9EC1-4954-96CD-5DF3282B88D2}|SocialMediaAPI.infrastructure\\SocialMediaAPI.infrastructure.csproj|c:\\users\\saidy\\source\\repos\\socialmediatest\\socialmediaapi.infrastructure\\repositories\\notificationsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9CE7AD-9EC1-4954-96CD-5DF3282B88D2}|SocialMediaAPI.infrastructure\\SocialMediaAPI.infrastructure.csproj|solutionrelative:socialmediaapi.infrastructure\\repositories\\notificationsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9CE7AD-9EC1-4954-96CD-5DF3282B88D2}|SocialMediaAPI.infrastructure\\SocialMediaAPI.infrastructure.csproj|c:\\users\\saidy\\source\\repos\\socialmediatest\\socialmediaapi.infrastructure\\repositories\\votesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9CE7AD-9EC1-4954-96CD-5DF3282B88D2}|SocialMediaAPI.infrastructure\\SocialMediaAPI.infrastructure.csproj|solutionrelative:socialmediaapi.infrastructure\\repositories\\votesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C9CE7AD-9EC1-4954-96CD-5DF3282B88D2}|SocialMediaAPI.infrastructure\\SocialMediaAPI.infrastructure.csproj|c:\\users\\saidy\\source\\repos\\socialmediatest\\socialmediaapi.infrastructure\\repositories\\postsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C9CE7AD-9EC1-4954-96CD-5DF3282B88D2}|SocialMediaAPI.infrastructure\\SocialMediaAPI.infrastructure.csproj|solutionrelative:socialmediaapi.infrastructure\\repositories\\postsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7C15EAC-6D0E-44C6-9882-99BF36F52E20}|SocialMedia.domain\\SocialMediaAPI.domain.csproj|c:\\users\\saidy\\source\\repos\\socialmediatest\\socialmedia.domain\\entities\\notifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7C15EAC-6D0E-44C6-9882-99BF36F52E20}|SocialMedia.domain\\SocialMediaAPI.domain.csproj|solutionrelative:socialmedia.domain\\entities\\notifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7C15EAC-6D0E-44C6-9882-99BF36F52E20}|SocialMedia.domain\\SocialMediaAPI.domain.csproj|c:\\users\\saidy\\source\\repos\\socialmediatest\\socialmedia.domain\\entities\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7C15EAC-6D0E-44C6-9882-99BF36F52E20}|SocialMedia.domain\\SocialMediaAPI.domain.csproj|solutionrelative:socialmedia.domain\\entities\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7C15EAC-6D0E-44C6-9882-99BF36F52E20}|SocialMedia.domain\\SocialMediaAPI.domain.csproj|c:\\users\\saidy\\source\\repos\\socialmediatest\\socialmedia.domain\\entities\\posts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7C15EAC-6D0E-44C6-9882-99BF36F52E20}|SocialMedia.domain\\SocialMediaAPI.domain.csproj|solutionrelative:socialmedia.domain\\entities\\posts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822F8CB9-127C-4AD2-8D60-C7B1A3810866}|SocialMedia.API\\SocialMedia.API.csproj|c:\\users\\saidy\\source\\repos\\socialmediatest\\socialmedia.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{822F8CB9-127C-4AD2-8D60-C7B1A3810866}|SocialMedia.API\\SocialMedia.API.csproj|solutionrelative:socialmedia.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822F8CB9-127C-4AD2-8D60-C7B1A3810866}|SocialMedia.API\\SocialMedia.API.csproj|c:\\users\\saidy\\source\\repos\\socialmediatest\\socialmedia.api\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822F8CB9-127C-4AD2-8D60-C7B1A3810866}|SocialMedia.API\\SocialMedia.API.csproj|solutionrelative:socialmedia.api\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822F8CB9-127C-4AD2-8D60-C7B1A3810866}|SocialMedia.API\\SocialMedia.API.csproj|c:\\users\\saidy\\source\\repos\\socialmediatest\\socialmedia.api\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822F8CB9-127C-4AD2-8D60-C7B1A3810866}|SocialMedia.API\\SocialMedia.API.csproj|solutionrelative:socialmedia.api\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BB0ABF2-0304-44AE-987F-9C2ED665CC06}|SocialMediaAPI.application\\SocialMediaAPI.application.csproj|c:\\users\\saidy\\source\\repos\\socialmediatest\\socialmediaapi.application\\services\\postsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,24 +62,96 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VotesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.infrastructure\\Repositories\\VotesRepository.cs",
+              "RelativeDocumentMoniker": "SocialMediaAPI.infrastructure\\Repositories\\VotesRepository.cs",
+              "ToolTip": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.infrastructure\\Repositories\\VotesRepository.cs",
+              "RelativeToolTip": "SocialMediaAPI.infrastructure\\Repositories\\VotesRepository.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T20:12:06.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Notifications.cs",
+              "DocumentMoniker": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.domain\\entities\\Notifications.cs",
+              "RelativeDocumentMoniker": "SocialMedia.domain\\entities\\Notifications.cs",
+              "ToolTip": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.domain\\entities\\Notifications.cs",
+              "RelativeToolTip": "SocialMedia.domain\\entities\\Notifications.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T20:01:11.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Categories.cs",
+              "DocumentMoniker": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.domain\\entities\\Categories.cs",
+              "RelativeDocumentMoniker": "SocialMedia.domain\\entities\\Categories.cs",
+              "ToolTip": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.domain\\entities\\Categories.cs",
+              "RelativeToolTip": "SocialMedia.domain\\entities\\Categories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T20:01:05.39Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "NotificationsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.infrastructure\\Repositories\\NotificationsRepository.cs",
+              "RelativeDocumentMoniker": "SocialMediaAPI.infrastructure\\Repositories\\NotificationsRepository.cs",
+              "ToolTip": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.infrastructure\\Repositories\\NotificationsRepository.cs",
+              "RelativeToolTip": "SocialMediaAPI.infrastructure\\Repositories\\NotificationsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T20:00:32.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Posts.cs",
+              "DocumentMoniker": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.domain\\entities\\Posts.cs",
+              "RelativeDocumentMoniker": "SocialMedia.domain\\entities\\Posts.cs",
+              "ToolTip": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.domain\\entities\\Posts.cs",
+              "RelativeToolTip": "SocialMedia.domain\\entities\\Posts.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T19:48:47.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\appsettings.json",
+              "RelativeDocumentMoniker": "SocialMedia.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\appsettings.json",
+              "RelativeToolTip": "SocialMedia.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-24T19:45:49.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "CommentsRepository.cs",
               "DocumentMoniker": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.infrastructure\\Repositories\\CommentsRepository.cs",
               "RelativeDocumentMoniker": "SocialMediaAPI.infrastructure\\Repositories\\CommentsRepository.cs",
               "ToolTip": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.infrastructure\\Repositories\\CommentsRepository.cs",
               "RelativeToolTip": "SocialMediaAPI.infrastructure\\Repositories\\CommentsRepository.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAcwEwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T15:24:10.755Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "CommentsController.cs",
               "DocumentMoniker": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\Controllers\\CommentsController.cs",
               "RelativeDocumentMoniker": "SocialMedia.API\\Controllers\\CommentsController.cs",
@@ -63,8 +159,7 @@
               "RelativeToolTip": "SocialMedia.API\\Controllers\\CommentsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T15:23:14.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T15:23:14.752Z"
             },
             {
               "$type": "Document",
@@ -74,14 +169,13 @@
               "RelativeDocumentMoniker": "SocialMediaAPI.infrastructure\\Repositories\\PostsRepository.cs",
               "ToolTip": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.infrastructure\\Repositories\\PostsRepository.cs",
               "RelativeToolTip": "SocialMediaAPI.infrastructure\\Repositories\\PostsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAowD4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T15:03:32.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T15:03:32.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "PostsService.cs",
               "DocumentMoniker": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.application\\Services\\PostsService.cs",
               "RelativeDocumentMoniker": "SocialMediaAPI.application\\Services\\PostsService.cs",
@@ -89,12 +183,11 @@
               "RelativeToolTip": "SocialMediaAPI.application\\Services\\PostsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T15:03:20.263Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T15:03:20.263Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "IPostsRepository.cs",
               "DocumentMoniker": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.application\\Interfaces\\IPostsRepository.cs",
               "RelativeDocumentMoniker": "SocialMediaAPI.application\\Interfaces\\IPostsRepository.cs",
@@ -102,12 +195,11 @@
               "RelativeToolTip": "SocialMediaAPI.application\\Interfaces\\IPostsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T15:02:59.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T15:02:59.576Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "IPostsService.cs",
               "DocumentMoniker": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.application\\Interfaces\\IPostsService.cs",
               "RelativeDocumentMoniker": "SocialMediaAPI.application\\Interfaces\\IPostsService.cs",
@@ -115,12 +207,11 @@
               "RelativeToolTip": "SocialMediaAPI.application\\Interfaces\\IPostsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T15:02:58.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T15:02:58.937Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "PostsController.cs",
               "DocumentMoniker": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\Controllers\\PostsController.cs",
               "RelativeDocumentMoniker": "SocialMedia.API\\Controllers\\PostsController.cs",
@@ -128,8 +219,7 @@
               "RelativeToolTip": "SocialMedia.API\\Controllers\\PostsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T15:00:50.258Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T15:00:50.258Z"
             }
           ]
         }

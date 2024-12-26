@@ -45,8 +45,8 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Posts
                 .Where(p => p.CategoryId == categoryId)
-                .Include(p => p.Author)  // Eager load related Author
-                .Include(p => p.Category) // Eager load related Category
+                .Include(p => p.Author)  
+                .Include(p => p.Category) 
                 .ToListAsync();
         }
 
@@ -54,14 +54,14 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             await _context.Posts.AddAsync(post);
             await _context.SaveChangesAsync();
-            return post; // Return the added post
+            return post; 
         }
 
         public async Task<Posts> UpdatePostAsync(Posts post)
         {
             _context.Posts.Update(post);
             await _context.SaveChangesAsync();
-            return post; // Return the updated post
+            return post; 
         }
 
         public async Task DeletePostAsync(int id)

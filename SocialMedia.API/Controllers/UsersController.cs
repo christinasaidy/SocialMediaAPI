@@ -16,7 +16,7 @@ namespace SocialMedia.API.Controllers
             _usersService = usersService;
         }
 
-        // GET: api/Users/{id}
+       
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUserById(int id)
         {
@@ -26,7 +26,7 @@ namespace SocialMedia.API.Controllers
             return Ok(user);
         }
 
-        // POST: api/Users
+      
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] Users user)
         {
@@ -37,7 +37,7 @@ namespace SocialMedia.API.Controllers
             return CreatedAtAction(nameof(GetUserById), new { id = createdUser.Id }, createdUser);
         }
 
-        // PUT: api/Users/{id}
+       
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(int id, [FromBody] Users user)
         {
@@ -51,7 +51,6 @@ namespace SocialMedia.API.Controllers
             return Ok(updatedUser);
         }
 
-        // DELETE: api/Users/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {

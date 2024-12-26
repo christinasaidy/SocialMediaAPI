@@ -17,7 +17,6 @@ namespace SocialMedia.API.Controllers
             _votesService = votesService;
         }
 
-        // GET: api/Votes/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetVoteById(int id)
         {
@@ -27,7 +26,7 @@ namespace SocialMedia.API.Controllers
             return Ok(vote);
         }
 
-        // GET: api/Votes/Post/{postId}
+    
         [HttpGet("Post/{postId}")]
         public async Task<IActionResult> GetVotesByPostId(int postId)
         {
@@ -35,7 +34,6 @@ namespace SocialMedia.API.Controllers
             return Ok(votes);
         }
 
-        // GET: api/Votes/User/{userId}
         [HttpGet("User/{userId}")]
         public async Task<IActionResult> GetVotesByUserId(int userId)
         {
@@ -43,7 +41,7 @@ namespace SocialMedia.API.Controllers
             return Ok(votes);
         }
 
-        // POST: api/Votes
+     
         [HttpPost]
         public async Task<IActionResult> AddVote([FromBody] Votes vote)
         {
@@ -54,7 +52,7 @@ namespace SocialMedia.API.Controllers
             return CreatedAtAction(nameof(GetVoteById), new { id = createdVote.Id }, createdVote);
         }
 
-        // PUT: api/Votes/{id}
+     
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateVote(int id, [FromBody] Votes vote)
         {
@@ -68,7 +66,6 @@ namespace SocialMedia.API.Controllers
             return Ok(updatedVote);
         }
 
-        // DELETE: api/Votes/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteVote(int id)
         {
