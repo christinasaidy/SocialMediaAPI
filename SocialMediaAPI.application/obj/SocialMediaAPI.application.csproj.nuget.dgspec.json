@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.application\\SocialMediaAPI.application.csproj": {}
+    "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMediaAPI.application\\SocialMediaAPI.application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.domain\\SocialMediaAPI.domain.csproj": {
+    "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.domain\\SocialMediaAPI.domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.domain\\SocialMediaAPI.domain.csproj",
+        "projectUniqueName": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.domain\\SocialMediaAPI.domain.csproj",
         "projectName": "SocialMediaAPI.domain",
-        "projectPath": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.domain\\SocialMediaAPI.domain.csproj",
-        "packagesPath": "C:\\Users\\saidy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.domain\\obj\\",
+        "projectPath": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.domain\\SocialMediaAPI.domain.csproj",
+        "packagesPath": "C:\\Users\\BOA\\.nuget\\packages\\",
+        "outputPath": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\saidy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BOA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -35,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -61,21 +55,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.application\\SocialMediaAPI.application.csproj": {
+    "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMediaAPI.application\\SocialMediaAPI.application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.application\\SocialMediaAPI.application.csproj",
+        "projectUniqueName": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMediaAPI.application\\SocialMediaAPI.application.csproj",
         "projectName": "SocialMediaAPI.application",
-        "projectPath": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.application\\SocialMediaAPI.application.csproj",
-        "packagesPath": "C:\\Users\\saidy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMediaAPI.application\\obj\\",
+        "projectPath": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMediaAPI.application\\SocialMediaAPI.application.csproj",
+        "packagesPath": "C:\\Users\\BOA\\.nuget\\packages\\",
+        "outputPath": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMediaAPI.application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\saidy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BOA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,15 +77,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.domain\\SocialMediaAPI.domain.csproj": {
-                "projectPath": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.domain\\SocialMediaAPI.domain.csproj"
+              "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.domain\\SocialMediaAPI.domain.csproj": {
+                "projectPath": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.domain\\SocialMediaAPI.domain.csproj"
               }
             }
           }
@@ -100,11 +93,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -142,7 +130,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
