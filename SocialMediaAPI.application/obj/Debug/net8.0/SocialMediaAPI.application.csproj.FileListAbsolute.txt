@@ -16,3 +16,21 @@ C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug
 C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.genruntimeconfig.cache
 C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\ref\SocialMediaAPI.application.dll
 C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.sourcelink.json
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.deps.json
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.runtimeconfig.json
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.dll
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.pdb
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.domain.dll
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.domain.pdb
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.csproj.AssemblyReference.cache
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.GeneratedMSBuildEditorConfig.editorconfig
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.AssemblyInfoInputs.cache
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.AssemblyInfo.cs
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.csproj.CoreCompileInputs.cache
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.sourcelink.json
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.csproj.CopyComplete
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.dll
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\refint\SocialMediaAPI.application.dll
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.pdb
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.genruntimeconfig.cache
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\ref\SocialMediaAPI.application.dll

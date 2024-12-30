@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SocialMediaAPI.application.Interfaces;
+﻿using SocialMediaAPI.application.Interfaces;
 using SocialMediaAPI.domain.entities;
 
 namespace SocialMediaAPI.application.Services
@@ -35,6 +30,11 @@ namespace SocialMediaAPI.application.Services
         public async Task<bool> DeleteUserAsync(int userId)
         {
             return await _usersRepository.DeleteUserAsync(userId);
+        }
+
+        public async Task<Users?> GetUserByUsernameAsync(string username)
+        {
+            return await _usersRepository.GetUserByUsernameAsync(username);
         }
     }
 }

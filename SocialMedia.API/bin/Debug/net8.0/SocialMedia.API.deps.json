@@ -671,18 +671,12 @@
           "SocialMediaAPI.domain": "1.0.0"
         },
         "runtime": {
-          "SocialMediaAPI.application.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "SocialMediaAPI.application.dll": {}
         }
       },
       "SocialMediaAPI.domain/1.0.0": {
         "runtime": {
-          "SocialMediaAPI.domain.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "SocialMediaAPI.domain.dll": {}
         }
       },
       "SocialMediaAPI.infrastructure/1.0.0": {
@@ -691,10 +685,7 @@
           "SocialMediaAPI.domain": "1.0.0"
         },
         "runtime": {
-          "SocialMediaAPI.infrastructure.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "SocialMediaAPI.infrastructure.dll": {}
         }
       }
     }

@@ -30,14 +30,14 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
-            return user; 
+            return user;
         }
 
         public async Task<Users> UpdateUserAsync(Users user)
         {
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
-            return user; 
+            return user;
         }
 
         public async Task<bool> DeleteUserAsync(int id)
@@ -47,9 +47,14 @@ namespace SocialMediaAPI.infrastructure.Repositories
             {
                 _context.Users.Remove(user);
                 await _context.SaveChangesAsync();
-                return true; 
+                return true;
             }
             return false;
+        }
+
+        public async Task<Users?> GetUserByUsernameAsync(string username)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.UserName == username);
         }
     }
 }

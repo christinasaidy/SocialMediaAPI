@@ -16,7 +16,7 @@ namespace SocialMedia.API.Controllers
             _usersService = usersService;
         }
 
-       
+        // Get User by ID
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUserById(int id)
         {
@@ -26,7 +26,7 @@ namespace SocialMedia.API.Controllers
             return Ok(user);
         }
 
-      
+        // Create a new user
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] Users user)
         {
@@ -37,7 +37,7 @@ namespace SocialMedia.API.Controllers
             return CreatedAtAction(nameof(GetUserById), new { id = createdUser.Id }, createdUser);
         }
 
-       
+        // Update an existing user
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(int id, [FromBody] Users user)
         {
@@ -51,6 +51,7 @@ namespace SocialMedia.API.Controllers
             return Ok(updatedUser);
         }
 
+        // Delete a user
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
@@ -59,6 +60,23 @@ namespace SocialMedia.API.Controllers
                 return NotFound();
 
             return NoContent();
+        }
+
+        // SignIn User by UserName and Password
+        [HttpGet("signin")]
+        public async Task<IActionResult> SignIn([FromQuery] string userName, [FromQuery] string password)
+        {
+            // Fetch user by username
+            var user = await _usersService.GetUserByUsernameAsync(userName);
+
+            if (user == null)
+                return NotFound("User not found");
+
+            // Check password
+            if (user.Password != password)
+                return Unauthorized("Invalid password");
+
+            return Ok(user); // Sign in successful
         }
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SocialMediaAPI.domain.entities;
-
+﻿using SocialMediaAPI.domain.entities;
 
 namespace SocialMediaAPI.application.Interfaces
 {
@@ -14,5 +8,8 @@ namespace SocialMediaAPI.application.Interfaces
         Task<Users> CreateUserAsync(Users user);
         Task<Users> UpdateUserAsync(Users user);
         Task<bool> DeleteUserAsync(int userId);
+
+        // New Method
+        Task<Users?> GetUserByUsernameAsync(string username);
     }
 }
