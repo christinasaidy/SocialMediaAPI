@@ -14,9 +14,9 @@ namespace SocialMedia.API.Controllers
     {
         private readonly IPostsService _postsService;
         
-        //##! here is where the connection between user, category and post is made
-        private readonly ICategoriesService _categoryService; // Service to get category details
-        private readonly IUsersService _userService; // Service to get user details
+      
+        private readonly ICategoriesService _categoryService; 
+        private readonly IUsersService _userService; 
 
 
         private readonly IMapper _mapper; 
@@ -29,13 +29,10 @@ namespace SocialMedia.API.Controllers
             _mapper = mapper;
         }
 
-        // POST: api/Posts
         [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreatePost([FromBody] CreatePostResource postCreateDto)
         {
-
-            // Get the userId from the JWT token (authentication required)
             var userId = GetUserIdFromToken(); 
             Console.WriteLine($"User ID: {userId}");
             if (!ModelState.IsValid)
@@ -47,7 +44,6 @@ namespace SocialMedia.API.Controllers
                 return Unauthorized("User is not authenticated.");
             }
 
-            // Get the CategoryId from the category name
             var category = await _categoryService.GetCategoryByNameAsync(postCreateDto.CategoryName);
 
             if (category == null)
@@ -55,7 +51,6 @@ namespace SocialMedia.API.Controllers
                 return NotFound($"Category '{postCreateDto.CategoryName}' not found.");
             }
 
-            // Get user details
             var user = await _userService.GetUserByIdAsync(userId);
 
             if (user == null)
@@ -63,25 +58,22 @@ namespace SocialMedia.API.Controllers
                 return NotFound("User not found.");
             }
 
-            // Use AutoMapper to map from CreatePostResource to Post
             var post = _mapper.Map<Posts>(postCreateDto);
 
-            // Set the CategoryId and UserId manually
             post.CategoryId = category.Id;
             post.UserId = user.Id;
             post.CreatedAt = DateTime.UtcNow;
             post.UpdatedAt = DateTime.UtcNow;
-            post.Author = user; // Use the user object retrieved from the user service
-            post.Category = category; // Set the category object
+            post.Author = user;
+            post.Category = category; 
 
-            // Save the post using the service
+          
             var createdPost = await _postsService.AddPostAsync(post);
 
-            // Return the created post with status code 201 (Created)
+ 
             return CreatedAtAction(nameof(GetPostById), new { id = createdPost.Id }, createdPost);
         }
 
-        // GET: api/Posts/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPostById(int id)
         {

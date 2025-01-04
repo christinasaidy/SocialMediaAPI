@@ -11,11 +11,15 @@ namespace SocialMediaAPI.application.Services
 {
     public class CommentsService : ICommentsService
     {
+        private readonly IPostsService _postService;
+        private readonly IUsersService _userService;
         private readonly ICommentsRepository _commentsRepository;
 
-        public CommentsService(ICommentsRepository commentsRepository)
+        public CommentsService(IPostsService postService, IUsersService userService, ICommentsRepository commentRepository)
         {
-            _commentsRepository = commentsRepository;
+            _postService = postService;
+            _userService = userService;
+            _commentsRepository = commentRepository;
         }
 
         public async Task<Comments> GetCommentByIdAsync(int id)
@@ -41,6 +45,17 @@ namespace SocialMediaAPI.application.Services
         public async Task DeleteCommentAsync(int id)
         {
             await _commentsRepository.DeleteCommentAsync(id);
+        }
+
+
+        public async Task<Posts> GetPostByIdAsync(int postId)
+        {
+            return await _postService.GetPostByIdAsync(postId); // Call the method in IPostService
+        }
+
+        public async Task<Users> GetUserByIdAsync(int userId)
+        {
+            return await _userService.GetUserByIdAsync(userId); // Call the method in IUserService
         }
     }
 }

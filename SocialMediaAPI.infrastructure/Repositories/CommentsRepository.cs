@@ -21,10 +21,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Comments
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Author) 
+                    .ThenInclude(p => p.Author)
                 .Include(c => c.Post)
                     .ThenInclude(p => p.Category)
-                .Include(c => c.User) 
+                .Include(c => c.User)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
@@ -32,10 +32,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Comments
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Author) 
+                    .ThenInclude(p => p.Author)
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Category) 
-                .Include(c => c.User) 
+                    .ThenInclude(p => p.Category)
+                .Include(c => c.User)
                 .ToListAsync();
         }
 
@@ -44,10 +44,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return await _context.Comments
                 .Where(c => c.PostId == postId)
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Author) 
+                    .ThenInclude(p => p.Author)
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Category) 
-                .Include(c => c.User) 
+                    .ThenInclude(p => p.Category)
+                .Include(c => c.User)
                 .ToListAsync();
         }
 
@@ -56,9 +56,9 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return await _context.Comments
                 .Where(c => c.UserId == userId)
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Author) 
+                    .ThenInclude(p => p.Author)
                 .Include(c => c.Post)
-                    .ThenInclude(p => p.Category) 
+                    .ThenInclude(p => p.Category)
                 .ToListAsync();
         }
 
@@ -85,5 +85,17 @@ namespace SocialMediaAPI.infrastructure.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+        public async Task<Posts> GetPostByIdAsync(int postId)
+        {
+            return await _context.Posts
+                .FirstOrDefaultAsync(p => p.Id == postId); 
+        }
+
+        public async Task<Users> GetUserByIdAsync(int userId)
+        {
+            return await _context.Users
+                .FirstOrDefaultAsync(u => u.Id == userId);
+        }
+
     }
 }

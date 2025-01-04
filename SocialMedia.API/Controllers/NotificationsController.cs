@@ -14,7 +14,7 @@ namespace SocialMedia.API.Controllers
     public class NotificationsController : ControllerBase
     {
         private readonly INotificationsService _notificationsService;
-        private readonly IUsersService _usersService; // To fetch user details
+        private readonly IUsersService _usersService; 
         private readonly IMapper _mapper;
 
         public NotificationsController(INotificationsService notificationsService, IUsersService usersService, IMapper mapper)
@@ -24,7 +24,7 @@ namespace SocialMedia.API.Controllers
             _mapper = mapper;
         }
 
-        // GET: api/Notifications/{id}
+      
         [HttpGet("{id}")]
         public async Task<IActionResult> GetNotificationById(int id)
         {
@@ -34,7 +34,6 @@ namespace SocialMedia.API.Controllers
             return Ok(notification);
         }
 
-        // GET: api/Notifications/User/{userId}
         [Authorize]
         [HttpGet("User")]
         public async Task<IActionResult> GetNotificationsByUserId()
@@ -50,44 +49,40 @@ namespace SocialMedia.API.Controllers
             return Ok(notifications);
         }
 
-        // POST: api/Notifications
         [Authorize]
         [HttpPost]
         public async Task<IActionResult> AddNotification([FromBody] CreateNotificationResource resource)
         {
-            // Validate the model
+       
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            // Get the userId from the JWT token
+           
             var userId = GetUserIdFromToken();
             if (userId == 0)
             {
                 return Unauthorized("User is not authenticated.");
             }
 
-            // Get the recipient user details (optional, if needed)
+           
             var recipient = await _usersService.GetUserByIdAsync(userId);
             if (recipient == null)
             {
                 return NotFound("Recipient user not found.");
             }
 
-            // Map resource to notification entity
+        
             var notification = _mapper.Map<Notifications>(resource);
-
-            // Set additional fields
             notification.UserId = userId;
             notification.CreatedAt = DateTime.UtcNow;
 
-            // Add the notification via the service
+    
             var createdNotification = await _notificationsService.AddNotificationAsync(notification);
 
-            // Return the created notification with status code 201 (Created)
             return CreatedAtAction(nameof(GetNotificationById), new { id = createdNotification.Id }, createdNotification);
         }
 
-        // DELETE: api/Notifications/{id}
+     
         [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteNotification(int id)
@@ -114,7 +109,6 @@ namespace SocialMedia.API.Controllers
             return NoContent();
         }
 
-        // Utility to get the userId from the JWT token
         private int GetUserIdFromToken()
         {
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId");

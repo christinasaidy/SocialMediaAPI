@@ -14,5 +14,7 @@ namespace SocialMediaAPI.application.Interfaces
         Task<Comments> AddCommentAsync(Comments comment);
         Task<Comments> UpdateCommentAsync(Comments comment);
         Task DeleteCommentAsync(int id);
+        Task<Posts> GetPostByIdAsync(int postId);
+        Task<Users> GetUserByIdAsync(int userId);
     }
 }
