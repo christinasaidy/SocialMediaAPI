@@ -40,17 +40,33 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return user;
         }
 
-        public async Task<bool> DeleteUserAsync(int id)
+        public async Task<bool> DeleteUserAsync(int userId)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user != null)
+            // Fetch the user without loading posts since the foreign key is in the Posts entity
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Id == userId);
+
+            if (user == null)
             {
-                _context.Users.Remove(user);
-                await _context.SaveChangesAsync();
-                return true;
+                return false; // User not found
             }
-            return false;
+
+            // Delete associated posts by userId
+            var posts = await _context.Posts
+                .Where(p => p.UserId == userId)
+                .ToListAsync();
+
+            _context.Posts.RemoveRange(posts);
+
+            // Delete the user
+            _context.Users.Remove(user);
+
+            // Save changes to the database
+            await _context.SaveChangesAsync();
+
+            return true;
         }
+
 
         public async Task<Users?> GetUserByUsernameAsync(string username)
         {

@@ -95,4 +95,27 @@ public class UsersController : ControllerBase
 
         return Ok(user);
     }
+    [Authorize] // Requires authentication
+    [HttpDelete("delete")]
+    public async Task<IActionResult> DeleteAccount()
+    {
+        // Extract the user ID from the token
+        var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized("Invalid token or user ID not found.");
+        }
+
+        // Call the service layer to delete the user
+        var isDeleted = await _usersService.DeleteUserAsync(userId);
+
+        if (!isDeleted)
+        {
+            return NotFound("User not found or already deleted.");
+        }
+
+        return Ok("User account deleted successfully.");
+    }
+
 }

@@ -91,12 +91,41 @@ namespace SocialMedia.API.Controllers
             return Ok(post);
         }
 
-        // Helper method to get UserId from the JWT token
+      
         private int GetUserIdFromToken()
         {
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId"); 
             Console.WriteLine($"User ID Claim: {userIdClaim?.Value}");
             return userIdClaim != null ? int.Parse(userIdClaim.Value) : 0;
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePost(int id)
+        {
+            var userId = GetUserIdFromToken();
+
+            if (userId == 0)
+            {
+                return Unauthorized("User is not authenticated.");
+            }
+
+            var post = await _postsService.GetPostByIdAsync(id);
+            if (post == null)
+            {
+                return NotFound("Post not found.");
+            }
+
+            if (post.UserId != userId)
+            {
+                return Unauthorized("You are not authorized to delete this post.");
+            }
+
+            await _postsService.DeletePostAsync(id);
+            return NoContent(); 
+        }
+
+
+
     }
+
 }
