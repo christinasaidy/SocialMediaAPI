@@ -5,6 +5,7 @@ using Microsoft.Extensions.Hosting;
 using SocialMedia.API.Resources.PostResources;
 using SocialMedia.API.Resources.NotificationResources;
 using SocialMedia.API.Resources.CommentResources;
+using SocialMedia.API.Resources.CategoryResources;
 
 namespace SocialMedia.API.Mappings
 {
@@ -45,6 +46,16 @@ namespace SocialMedia.API.Mappings
                 .ForMember(dest => dest.PostId, opt => opt.Ignore()) 
                 .ForMember(dest => dest.UserId, opt => opt.Ignore())
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore());
+
+
+            CreateMap<CreateCategoryResource, Categories>()
+                .ForMember(dest => dest.Id, opt => opt.Ignore()) 
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name));
+
+            CreateMap<UpdateCategoryResource, Categories>()
+                .ForMember(dest => dest.Id, opt => opt.Ignore()) 
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name));
+
         }
     }
 }
