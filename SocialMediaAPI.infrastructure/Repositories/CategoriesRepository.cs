@@ -52,5 +52,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+        public async Task<Categories> GetCategoryByNameAsync(string categoryName)
+        {
+            return await _context.Categories
+                .FirstOrDefaultAsync(c => c.Name == categoryName);
+        }
     }
 }

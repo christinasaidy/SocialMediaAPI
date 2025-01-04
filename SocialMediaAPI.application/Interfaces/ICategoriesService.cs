@@ -13,6 +13,8 @@ namespace SocialMediaAPI.application.Interfaces
         Task<IEnumerable<Categories>> GetAllCategoriesAsync();
         Task<Categories> AddCategoryAsync(Categories category);
         Task<Categories> UpdateCategoryAsync(Categories category);
+        Task<Categories> GetCategoryByNameAsync(string categoryName);
+
         Task DeleteCategoryAsync(int id);
     }
 }

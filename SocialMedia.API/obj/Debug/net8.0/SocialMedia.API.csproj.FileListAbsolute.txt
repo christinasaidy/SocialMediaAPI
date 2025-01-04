@@ -184,3 +184,6 @@ E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMedia.API
 E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMedia.API\obj\Debug\net8.0\SocialMedia.API.pdb
 E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMedia.API\obj\Debug\net8.0\SocialMedia.API.genruntimeconfig.cache
 E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMedia.API\obj\Debug\net8.0\ref\SocialMedia.API.dll
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMedia.API\bin\Debug\net8.0\AutoMapper.dll
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMedia.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMedia.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

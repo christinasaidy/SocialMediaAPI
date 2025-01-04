@@ -1,9 +1,6 @@
 ﻿using SocialMediaAPI.application.Interfaces;
 using SocialMediaAPI.domain.entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SocialMediaAPI.application.Services
@@ -40,6 +37,12 @@ namespace SocialMediaAPI.application.Services
         public async Task DeleteCategoryAsync(int id)
         {
             await _categoriesRepository.DeleteCategoryAsync(id);
+        }
+
+        // Implement the GetCategoryByNameAsync method
+        public async Task<Categories> GetCategoryByNameAsync(string categoryName)
+        {
+            return await _categoriesRepository.GetCategoryByNameAsync(categoryName);
         }
     }
 }
