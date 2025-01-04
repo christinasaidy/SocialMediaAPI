@@ -116,6 +116,47 @@ namespace SocialMedia.API.Controllers
             return NoContent(); 
         }
 
+        [Authorize]
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdatePost(int id, [FromBody] UpdatePostResource postUpdateDto)
+        {
+            var userId = GetUserIdFromToken();
+            Console.WriteLine($"User ID: {userId}");
+            if (userId == 0)
+            {
+                return Unauthorized("User is not authenticated.");
+            }
+
+            // Get the existing post to update
+            var post = await _postsService.GetPostByIdAsync(id);
+            if (post == null)
+            {
+                return NotFound("Post not found.");
+            }
+
+            // Check if the post belongs to the authenticated user
+            if (post.UserId != userId)
+            {
+                return Unauthorized("You are not authorized to update this post.");
+            }
+
+            // Map the UpdatePostResource to the Post entity
+            _mapper.Map(postUpdateDto, post);
+
+            post.UpdatedAt = DateTime.UtcNow;  // Update the timestamp
+
+            // Save the updated post
+            var updatedPost = await _postsService.UpdatePostAsync(post);
+
+            if (updatedPost == null)
+            {
+                return BadRequest("Failed to update post.");
+            }
+
+            return Ok(updatedPost);  // Return the updated post
+        }
+
+
 
 
     }

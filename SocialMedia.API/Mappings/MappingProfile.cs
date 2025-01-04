@@ -56,6 +56,15 @@ namespace SocialMedia.API.Mappings
                 .ForMember(dest => dest.Id, opt => opt.Ignore()) 
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name));
 
+            CreateMap<UpdatePostResource, Posts>()
+                .ForMember(dest => dest.Id, opt => opt.Ignore())  
+                .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.Tags))
+                .ForMember(dest => dest.CategoryId, opt => opt.Ignore())  
+                .ForMember(dest => dest.UserId, opt => opt.Ignore());  
+
+
         }
     }
 }
