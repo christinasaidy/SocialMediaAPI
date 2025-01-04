@@ -3,6 +3,7 @@ using SocialMediaAPI.domain.entities;
 using SocialMedia.API.Resources.UserResources;
 using Microsoft.Extensions.Hosting;
 using SocialMedia.API.Resources.PostResources;
+using SocialMedia.API.Resources.NotificationResources;
 
 namespace SocialMedia.API.Mappings
 {
@@ -27,6 +28,12 @@ namespace SocialMedia.API.Mappings
                 .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.Tags))
                 .ForMember(dest => dest.CategoryId, opt => opt.Ignore()) // This will be set manually based on CategoryName
                 .ForMember(dest => dest.UserId, opt => opt.Ignore());
+
+            CreateMap<CreateNotificationResource, Notifications>()
+           .ForMember(dest => dest.UserId, opt => opt.Ignore()) // To be set explicitly
+           .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Automatically managed
+           .ForMember(dest => dest.Recipient, opt => opt.Ignore()); // Optional field not included in this resource
+
         }
     }
 }
