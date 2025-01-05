@@ -6,6 +6,8 @@ using SocialMedia.API.Resources.PostResources;
 using SocialMedia.API.Resources.NotificationResources;
 using SocialMedia.API.Resources.CommentResources;
 using SocialMedia.API.Resources.CategoryResources;
+using SocialMedia.API.Resources.VoteResources;
+
 
 namespace SocialMedia.API.Mappings
 {
@@ -62,8 +64,12 @@ namespace SocialMedia.API.Mappings
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
                 .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.Tags))
                 .ForMember(dest => dest.CategoryId, opt => opt.Ignore())  
-                .ForMember(dest => dest.UserId, opt => opt.Ignore());  
+                .ForMember(dest => dest.UserId, opt => opt.Ignore());
 
+            CreateMap<CreateVoteResource, Votes>()
+                .ForMember(dest => dest.VoteType, opt => opt.MapFrom(src => src.VoteType))
+                .ForMember(dest => dest.PostId, opt => opt.Ignore())
+                .ForMember(dest => dest.UserId, opt => opt.Ignore());
 
         }
     }

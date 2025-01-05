@@ -11,15 +11,25 @@ namespace SocialMediaAPI.application.Services
     public class VotesService : IVotesService
     {
         private readonly IVotesRepository _votesRepository;
+        private readonly IPostsRepository _postService;
+        private readonly IUsersService _userService;
+        private readonly IPostsRepository _postRepository;
 
-        public VotesService(IVotesRepository votesRepository)
+        public VotesService(IVotesRepository votesRepository, IPostsRepository postService, IUsersService userService, IPostsRepository postRepository)
         {
             _votesRepository = votesRepository;
+            _postService = postService;
+            _userService = userService;
+            _postRepository = postRepository;
         }
 
         public async Task<Votes> GetVoteByIdAsync(int id)
         {
             return await _votesRepository.GetVoteByIdAsync(id);
+        }
+        public async Task<Posts> GetPostByIdAsync(int postId)
+        {
+            return await _postService.GetPostByIdAsync(postId);
         }
 
         public async Task<IEnumerable<Votes>> GetVotesByPostIdAsync(int postId)
@@ -45,6 +55,19 @@ namespace SocialMediaAPI.application.Services
         public async Task DeleteVoteAsync(int id)
         {
             await _votesRepository.DeleteVoteAsync(id);
+        }
+        public async Task<Users> GetUserByIdAsync(int userId)
+        {
+            return await _userService.GetUserByIdAsync(userId);
+        }
+        public async Task<Votes> GetVoteByUserAndPostAsync(int userId, int postId)
+        {
+            return await _votesRepository.GetVoteByUserAndPostAsync(userId, postId);
+        }
+
+        public async Task UpdatePostAsync(Posts post)
+        {
+            await _postRepository.UpdatePostAsync(post);
         }
     }
 }

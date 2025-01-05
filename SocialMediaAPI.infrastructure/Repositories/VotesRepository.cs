@@ -86,5 +86,18 @@ namespace SocialMediaAPI.infrastructure.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<Posts> GetPostByIdAsync(int postId)
+        {
+            return await _context.Posts
+                .FirstOrDefaultAsync(p => p.Id == postId);
+        }
+
+        public async Task<Votes> GetVoteByUserAndPostAsync(int userId, int postId)
+        {
+            return await _context.Votes
+                .FirstOrDefaultAsync(v => v.UserId == userId && v.PostId == postId);
+        }
+
     }
 }

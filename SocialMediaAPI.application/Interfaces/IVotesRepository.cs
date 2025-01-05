@@ -15,5 +15,9 @@ namespace SocialMediaAPI.application.Interfaces
         Task<Votes> AddVoteAsync(Votes vote);
         Task<Votes> UpdateVoteAsync(Votes vote);
         Task DeleteVoteAsync(int id);
+        Task<Posts> GetPostByIdAsync(int postId);
+        Task<Votes> GetVoteByUserAndPostAsync(int userId, int postId);
+
+
     }
 }
