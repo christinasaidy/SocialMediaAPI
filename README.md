@@ -30,7 +30,7 @@
 
 -------------------------------------------------------------------------------------
 
-### The CRUD Functions for Notifications consist of:
+### The CRUD Functions for Comments consist of:
 1) Post: Users can create a Comment by providing Post ID and the content of the comment
 2) Get: Returns Comments that the user signed in did to a specific post by providing the Post ID
 3) Update: Changes a comment's content by providing the Comment ID
