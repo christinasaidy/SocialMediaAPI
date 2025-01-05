@@ -114,8 +114,27 @@ namespace SocialMedia.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteVote(int id)
         {
+      
+            var vote = await _votesService.GetVoteByIdAsync(id);
+            if (vote == null)
+                return NotFound("Vote not found.");
+
+            var post = await _votesService.GetPostByIdAsync(vote.PostId);
+            if (post == null)
+                return NotFound("Associated post not found.");
+
+        
+            if (vote.VoteType == "Upvote")
+                post.UpvotesCount--;
+            else if (vote.VoteType == "Downvote")
+                post.DownvotesCount--;
+
+            await _votesService.UpdatePostAsync(post);
+
             await _votesService.DeleteVoteAsync(id);
+
             return NoContent();
         }
+
     }
 }
