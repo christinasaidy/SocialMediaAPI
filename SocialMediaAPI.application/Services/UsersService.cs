@@ -36,5 +36,11 @@ namespace SocialMediaAPI.application.Services
         {
             return await _usersRepository.GetUserByUsernameAsync(username);
         }
+        public async Task<string?> GetUsernameByIdAsync(int userId)
+        {
+            var user = await _usersRepository.GetUserByIdAsync(userId);
+            return user?.UserName; 
+        }
+
     }
 }

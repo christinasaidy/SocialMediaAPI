@@ -8,8 +8,7 @@ namespace SocialMediaAPI.application.Interfaces
         Task<Users> CreateUserAsync(Users user);
         Task<Users> UpdateUserAsync(Users user);
         Task<bool> DeleteUserAsync(int userId);
-
-        // New Method
         Task<Users?> GetUserByUsernameAsync(string username);
+        Task <String?> GetUsernameByIdAsync(int userId);
     }
 }

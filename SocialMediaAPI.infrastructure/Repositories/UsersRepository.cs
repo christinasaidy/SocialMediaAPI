@@ -67,10 +67,16 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return true;
         }
 
-
         public async Task<Users?> GetUserByUsernameAsync(string username)
         {
             return await _context.Users.FirstOrDefaultAsync(u => u.UserName == username);
+        }
+
+        // New method to get the username by userId
+        public async Task<string?> GetUsernameByIdAsync(int userId)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            return user?.UserName; // Return the username, or null if the user is not found
         }
     }
 }
