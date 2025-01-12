@@ -15,5 +15,7 @@ namespace SocialMediaAPI.application.Interfaces
         Task<Posts> AddPostAsync(Posts post);
         Task<Posts> UpdatePostAsync(Posts post);
         Task DeletePostAsync(int id);
+        Task<IEnumerable<Posts>> GetTopPostsByUpvotesAsync(int count); 
+
     }
 }

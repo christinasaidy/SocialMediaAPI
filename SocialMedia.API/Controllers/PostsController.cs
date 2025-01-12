@@ -2,9 +2,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SocialMedia.API.Resources.PostResources;
+using SocialMedia.API.Resources.CategoryResources;
+using SocialMedia.API.Resources.UserResources;
 using SocialMediaAPI.application.Interfaces;
+using SocialMediaAPI.domain.entities;
 using System.Security.Claims;
-
 
 namespace SocialMedia.API.Controllers
 {
@@ -13,13 +15,9 @@ namespace SocialMedia.API.Controllers
     public class PostsController : ControllerBase
     {
         private readonly IPostsService _postsService;
-        
-      
-        private readonly ICategoriesService _categoryService; 
-        private readonly IUsersService _userService; 
-
-
-        private readonly IMapper _mapper; 
+        private readonly ICategoriesService _categoryService;
+        private readonly IUsersService _userService;
+        private readonly IMapper _mapper;
 
         public PostsController(IPostsService postsService, ICategoriesService categoryService, IUsersService userService, IMapper mapper)
         {
@@ -33,11 +31,10 @@ namespace SocialMedia.API.Controllers
         [HttpPost]
         public async Task<IActionResult> CreatePost([FromBody] CreatePostResource postCreateDto)
         {
-            var userId = GetUserIdFromToken(); 
+            var userId = GetUserIdFromToken();
             Console.WriteLine($"User ID: {userId}");
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-
 
             if (userId == 0)
             {
@@ -65,13 +62,12 @@ namespace SocialMedia.API.Controllers
             post.CreatedAt = DateTime.UtcNow;
             post.UpdatedAt = DateTime.UtcNow;
             post.Author = user;
-            post.Category = category; 
+            post.Category = category;
 
-          
             var createdPost = await _postsService.AddPostAsync(post);
 
- 
-            return CreatedAtAction(nameof(GetPostById), new { id = createdPost.Id }, createdPost);
+            var postResource = _mapper.Map<PostResource>(createdPost);
+            return CreatedAtAction(nameof(GetPostById), new { id = createdPost.Id }, postResource);
         }
 
         [HttpGet("{id}")]
@@ -80,13 +76,14 @@ namespace SocialMedia.API.Controllers
             var post = await _postsService.GetPostByIdAsync(id);
             if (post == null)
                 return NotFound();
-            return Ok(post);
+
+            var postResource = _mapper.Map<PostResource>(post);
+            return Ok(postResource);
         }
 
-      
         private int GetUserIdFromToken()
         {
-            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId"); 
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId");
             Console.WriteLine($"User ID Claim: {userIdClaim?.Value}");
             return userIdClaim != null ? int.Parse(userIdClaim.Value) : 0;
         }
@@ -113,7 +110,7 @@ namespace SocialMedia.API.Controllers
             }
 
             await _postsService.DeletePostAsync(id);
-            return NoContent(); 
+            return NoContent();
         }
 
         [Authorize]
@@ -127,25 +124,21 @@ namespace SocialMedia.API.Controllers
                 return Unauthorized("User is not authenticated.");
             }
 
-            // Get the existing post to update
             var post = await _postsService.GetPostByIdAsync(id);
             if (post == null)
             {
                 return NotFound("Post not found.");
             }
 
-            // Check if the post belongs to the authenticated user
             if (post.UserId != userId)
             {
                 return Unauthorized("You are not authorized to update this post.");
             }
 
-            // Map the UpdatePostResource to the Post entity
             _mapper.Map(postUpdateDto, post);
 
             post.UpdatedAt = DateTime.UtcNow;  // Update the timestamp
 
-            // Save the updated post
             var updatedPost = await _postsService.UpdatePostAsync(post);
 
             if (updatedPost == null)
@@ -153,12 +146,21 @@ namespace SocialMedia.API.Controllers
                 return BadRequest("Failed to update post.");
             }
 
-            return Ok(updatedPost);  // Return the updated post
+            var updatedPostResource = _mapper.Map<PostResource>(updatedPost);
+            return Ok(updatedPostResource);
         }
 
+        [HttpGet("top")]
+        public async Task<IActionResult> GetTopPostsByUpvotes([FromQuery] int count = 5)
+        {
+            var posts = await _postsService.GetTopPostsByUpvotesAsync(count);
+            if (posts == null || !posts.Any())
+            {
+                return NotFound("No posts found.");
+            }
 
-
-
+            var postResources = _mapper.Map<IEnumerable<PostResource>>(posts);
+            return Ok(postResources);
+        }
     }
-
 }

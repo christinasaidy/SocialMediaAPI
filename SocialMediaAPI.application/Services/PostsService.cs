@@ -46,5 +46,9 @@ namespace SocialMediaAPI.application.Services
         {
             await _postsRepository.DeletePostAsync(id);
         }
+        public async Task<IEnumerable<Posts>> GetTopPostsByUpvotesAsync(int count)
+        {
+            return await _postsRepository.GetPostsSortedByUpvotesAsync(count);  // Call the repository to fetch posts
+        }
     }
 }
