@@ -117,5 +117,25 @@ public class UsersController : ControllerBase
 
         return Ok("User account deleted successfully.");
     }
+    [Authorize] // Requires authentication
+    [HttpGet("username")]
+    public async Task<IActionResult> GetUsernameAsync()
+    {
+        // Extract the user ID from the claims (JWT token)
+        var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized("Invalid token or user ID not found.");
+        }
+
+        // Fetch the username using the userId
+        var username = await _usersService.GetUsernameByIdAsync(userId);
+
+        if (username == null)
+            return NotFound("Username not found.");
+
+        return Ok(new { Username = username });
+    }
 
 }
