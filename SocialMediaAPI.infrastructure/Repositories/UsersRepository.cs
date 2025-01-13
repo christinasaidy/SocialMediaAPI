@@ -3,6 +3,7 @@ using SocialMediaAPI.domain.entities;
 using SocialMediaAPI.infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace SocialMediaAPI.infrastructure.Repositories
@@ -42,28 +43,16 @@ namespace SocialMediaAPI.infrastructure.Repositories
 
         public async Task<bool> DeleteUserAsync(int userId)
         {
-            // Fetch the user without loading posts since the foreign key is in the Posts entity
-            var user = await _context.Users
-                .FirstOrDefaultAsync(u => u.Id == userId);
-
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             if (user == null)
             {
                 return false; // User not found
             }
 
-            // Delete associated posts by userId
-            var posts = await _context.Posts
-                .Where(p => p.UserId == userId)
-                .ToListAsync();
-
+            var posts = await _context.Posts.Where(p => p.UserId == userId).ToListAsync();
             _context.Posts.RemoveRange(posts);
-
-            // Delete the user
             _context.Users.Remove(user);
-
-            // Save changes to the database
             await _context.SaveChangesAsync();
-
             return true;
         }
 
@@ -72,17 +61,37 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return await _context.Users.FirstOrDefaultAsync(u => u.UserName == username);
         }
 
-        // New method to get the username by userId
         public async Task<string?> GetUsernameByIdAsync(int userId)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
-            return user?.UserName; // Return the username, or null if the user is not found
+            return user?.UserName;
         }
+
         public async Task<IEnumerable<Posts>> GetPostsByUserIdAsync(int userId)
         {
-            return await _context.Posts
-                .Where(p => p.UserId == userId) // Filter posts by userId
-                .ToListAsync(); // Convert to a list
+            return await _context.Posts.Where(p => p.UserId == userId).ToListAsync();
+        }
+
+        // New method: GetBioByIdAsync
+        public async Task<string?> GetBioByIdAsync(int userId)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            return user?.Bio; // Return the bio if the user exists, otherwise null
+        }
+
+        // New method: AddBioAsync
+        public async Task<bool> AddBioAsync(int userId, string bio)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            if (user == null)
+            {
+                return false; // User not found
+            }
+
+            user.Bio = bio; // Update the bio
+            _context.Users.Update(user); // Mark the user entity as modified
+            await _context.SaveChangesAsync(); // Save changes to the database
+            return true; // Indicate success
         }
     }
 }

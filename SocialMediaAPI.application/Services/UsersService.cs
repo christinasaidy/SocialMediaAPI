@@ -1,6 +1,7 @@
 ﻿using SocialMediaAPI.application.Interfaces;
 using SocialMediaAPI.domain.entities;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace SocialMediaAPI.application.Services
@@ -50,26 +51,17 @@ namespace SocialMediaAPI.application.Services
         public async Task<List<Posts>> GetPostsByUserIdAsync(int userId)
         {
             var posts = await _postsRepository.GetPostsByUserIdAsync(userId);
-            return posts.ToList(); 
+            return posts.ToList();
         }
 
+        public async Task<string?> GetBioByIdAsync(int userId)
+        {
+            return await _usersRepository.GetBioByIdAsync(userId);
+        }
+
+        public async Task<bool> AddBioAsync(int userId, string bio)
+        {
+            return await _usersRepository.AddBioAsync(userId, bio);
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
