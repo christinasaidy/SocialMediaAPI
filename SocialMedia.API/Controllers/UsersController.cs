@@ -192,4 +192,56 @@ public class UsersController : ControllerBase
     }
 
 
+    [Authorize] // Requires authentication
+    [HttpGet("bio")]
+    public async Task<IActionResult> GetBio()
+    {
+        // Extract the user ID from the JWT token claims
+        var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized("Invalid token or user ID not found.");
+        }
+
+        // Get the bio using the service
+        var bio = await _usersService.GetBioByIdAsync(userId);
+
+        if (bio == null)
+        {
+            return NotFound("Bio not found for the user.");
+        }
+
+        return Ok(new { Bio = bio });
+    }
+
+    [Authorize] // Requires authentication
+    [HttpPost("addbio")]
+    public async Task<IActionResult> AddBio([FromBody] string bio)
+    {
+        if (string.IsNullOrEmpty(bio))
+        {
+            return BadRequest("Bio cannot be empty.");
+        }
+
+        // Extract the user ID from the JWT token claims
+        var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized("Invalid token or user ID not found.");
+        }
+
+        // Update the bio using the service
+        var isUpdated = await _usersService.AddBioAsync(userId, bio);
+
+        if (!isUpdated)
+        {
+            return NotFound("User not found or unable to update bio.");
+        }
+
+        return Ok("Bio updated successfully.");
+    }
+
+
 }
