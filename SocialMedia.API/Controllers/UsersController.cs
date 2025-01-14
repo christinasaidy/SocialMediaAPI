@@ -75,14 +75,44 @@ public class UsersController : ControllerBase
 
         var user = _mapper.Map<Users>(signUpResource);
 
+        // Check if the username already exists
         var existingUser = await _usersService.GetUserByUsernameAsync(user.UserName);
         if (existingUser != null)
             return Conflict("Username already exists");
 
+        // Create the new user
         var createdUser = await _usersService.CreateUserAsync(user);
 
-        return CreatedAtAction(nameof(SignIn), new { id = createdUser.Id }, createdUser);
+        // Generate JWT token
+        var claims = new List<Claim>
+    {
+        new Claim(JwtRegisteredClaimNames.Sub, createdUser.UserName), // Add Username as a claim
+        new Claim("UserId", createdUser.Id.ToString()), // Add UserId as a custom claim
+        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+    };
+
+        var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("YourSuperSecretKey12345111111111"));
+        var credentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
+
+        var token = new JwtSecurityToken(
+            issuer: "http://localhost:5128",
+            audience: "http://localhost:3000",
+            claims: claims,
+            expires: DateTime.UtcNow.AddHours(5),
+            signingCredentials: credentials
+        );
+
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var jwtToken = tokenHandler.WriteToken(token);
+
+        // Return the created user along with the JWT token
+        return Ok(new
+        {
+            Message = "User created successfully.",
+            Token = jwtToken
+        });
     }
+
 
     // Fetch User Profile (Requires Authentication)
     [Authorize] // Ensure only authenticated users can access this
@@ -137,5 +167,29 @@ public class UsersController : ControllerBase
 
         return Ok(new { Username = username });
     }
+
+    [Authorize] // Requires authentication
+    [HttpGet("posts")]
+    public async Task<IActionResult> GetPosts() //gets the signed in user posts
+    {
+        // Extract the user ID from the token
+        var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized("Invalid token or user ID not found.");
+        }
+
+        // Fetch posts using the service layer
+        var posts = await _usersService.GetPostsByUserIdAsync(userId);
+
+        if (posts == null || !posts.Any())
+        {
+            return NotFound("No posts found for the user.");
+        }
+
+        return Ok(posts);
+    }
+
 
 }

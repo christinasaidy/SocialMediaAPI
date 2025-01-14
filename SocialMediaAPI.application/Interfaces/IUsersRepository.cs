@@ -11,5 +11,6 @@ namespace SocialMediaAPI.application.Interfaces
         Task<bool> DeleteUserAsync(int userId);
         Task<Users?> GetUserByUsernameAsync(string username);
         Task<String?> GetUsernameByIdAsync(int userId);
+        Task<IEnumerable<Posts>> GetPostsByUserIdAsync(int userId);
     }
 }

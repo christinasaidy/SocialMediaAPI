@@ -78,5 +78,11 @@ namespace SocialMediaAPI.infrastructure.Repositories
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             return user?.UserName; // Return the username, or null if the user is not found
         }
+        public async Task<IEnumerable<Posts>> GetPostsByUserIdAsync(int userId)
+        {
+            return await _context.Posts
+                .Where(p => p.UserId == userId) // Filter posts by userId
+                .ToListAsync(); // Convert to a list
+        }
     }
 }
