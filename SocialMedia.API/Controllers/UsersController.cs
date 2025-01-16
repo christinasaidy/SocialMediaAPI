@@ -186,7 +186,8 @@ public class UsersController : ControllerBase
 
         if (posts == null || !posts.Any())
         {
-            return NotFound("No posts found for the user.");
+            // Return an empty JSON array to avoid frontend parsing issues
+            return Ok(new List<PostResource>());
         }
 
         // Map to PostResource
@@ -194,7 +195,6 @@ public class UsersController : ControllerBase
 
         return Ok(postResources);
     }
-
 
 
     [Authorize] // Requires authentication
@@ -247,6 +247,96 @@ public class UsersController : ControllerBase
 
         return Ok("Bio updated successfully.");
     }
+
+    [Authorize]
+    [HttpGet("profile-picture")]
+    public async Task<IActionResult> GetProfilePicture()
+    {
+        // Extract the user ID from the JWT token claims
+        var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized("Invalid token or user ID not found.");
+        }
+
+        // Get the profile picture URL from the service layer
+        var profilePictureUrl = await _usersService.GetProfilePictureByIdAsync(userId);
+
+        if (string.IsNullOrEmpty(profilePictureUrl))
+        {
+            return NotFound("Profile picture not found.");
+        }
+
+        return Ok(new { ProfilePictureUrl = profilePictureUrl });
+    }
+
+    [Authorize]
+    [HttpPost("profile-picture")]
+    public async Task<IActionResult> UpdateProfilePicture([FromForm] IFormFile file)
+    {
+        if (file == null || file.Length == 0)
+        {
+            return BadRequest("No file uploaded.");
+        }
+
+        var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
+        var fileExtension = Path.GetExtension(file.FileName).ToLower();
+        if (!allowedExtensions.Contains(fileExtension))
+        {
+            return BadRequest("Invalid file type.");
+        }
+
+        const long MaxFileSize = 5 * 1024 * 1024; // 5 MB
+        if (file.Length > MaxFileSize)
+        {
+            return BadRequest("File size exceeds the maximum limit.");
+        }
+
+        // Extract the user ID from the JWT token claims
+        var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized("Invalid token or user ID not found.");
+        }
+
+        // Ensure the directory exists
+        var directoryPath = Path.Combine("wwwroot", "profile-pictures");
+        if (!Directory.Exists(directoryPath))
+        {
+            Directory.CreateDirectory(directoryPath);
+        }
+
+        // Generate a unique file name
+        var uniqueFileName = $"{userId}_{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
+        var filePath = Path.Combine(directoryPath, uniqueFileName);
+
+        try
+        {
+            // Save the file to the file system
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(fileStream);
+            }
+
+            // Update the user's profile picture URL in the database
+            var profilePictureUrl = $"/profile-pictures/{uniqueFileName}";
+            var isUpdated = await _usersService.AddProfilePictureAsync(userId, profilePictureUrl);
+
+            if (!isUpdated)
+            {
+                return NotFound("User not found or unable to update profile picture.");
+            }
+
+            return Ok(new { ProfilePictureUrl = profilePictureUrl });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, "Internal server error while processing the file.");
+        }
+    }
+
+
 
 
 }

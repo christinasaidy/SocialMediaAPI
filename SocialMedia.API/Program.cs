@@ -111,6 +111,13 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+// Ensure the directory for profile pictures exists
+var profilePicturesDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "profile-pictures");
+if (!Directory.Exists(profilePicturesDirectory))
+{
+    Directory.CreateDirectory(profilePicturesDirectory);
+}
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -128,6 +135,8 @@ app.UseCors("AllowAll");
 // Enable authentication and authorization middleware
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseStaticFiles(); // Enables static file serving from wwwroot folder
+
 app.MapControllers();
 
 app.Run();

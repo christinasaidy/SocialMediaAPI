@@ -63,5 +63,15 @@ namespace SocialMediaAPI.application.Services
         {
             return await _usersRepository.AddBioAsync(userId, bio);
         }
+
+        public async Task<string?> GetProfilePictureByIdAsync(int userId)
+        {
+            return await _usersRepository.GetProfilePictureByIdAsync(userId);
+        }
+
+        public async Task<bool> AddProfilePictureAsync(int userId, string profilePictureUrl)
+        {
+            return await _usersRepository.AddProfilePictureAsync(userId, profilePictureUrl);
+        }
     }
 }

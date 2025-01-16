@@ -72,14 +72,14 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return await _context.Posts.Where(p => p.UserId == userId).ToListAsync();
         }
 
-        // New method: GetBioByIdAsync
+        // GetBioByIdAsync
         public async Task<string?> GetBioByIdAsync(int userId)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
-            return user?.Bio; // Return the bio if the user exists, otherwise null
+            return user?.Bio;
         }
 
-        // New method: AddBioAsync
+        // AddBioAsync
         public async Task<bool> AddBioAsync(int userId, string bio)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
@@ -88,7 +88,29 @@ namespace SocialMediaAPI.infrastructure.Repositories
                 return false; // User not found
             }
 
-            user.Bio = bio; // Update the bio
+            user.Bio = bio;
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+        // New method: GetProfilePictureByIdAsync
+        public async Task<string?> GetProfilePictureByIdAsync(int userId)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            return user?.ProfilePictureUrl; // Return the profile picture if the user exists, otherwise null
+        }
+
+        // New method: AddProfilePictureAsync
+        public async Task<bool> AddProfilePictureAsync(int userId, string profilePictureUrl)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            if (user == null)
+            {
+                return false; // User not found
+            }
+
+            user.ProfilePictureUrl = profilePictureUrl; // Update the profile picture
             _context.Users.Update(user); // Mark the user entity as modified
             await _context.SaveChangesAsync(); // Save changes to the database
             return true; // Indicate success
