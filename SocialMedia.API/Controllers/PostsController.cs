@@ -162,5 +162,20 @@ namespace SocialMedia.API.Controllers
             var postResources = _mapper.Map<IEnumerable<PostResource>>(posts);
             return Ok(postResources);
         }
+
+        [HttpGet("latest")]
+        public async Task<IActionResult> GetLatestPosts([FromQuery] int count = 10, [FromQuery] int offset = 0)
+        {
+            var posts = await _postsService.GetLatestPostsAsync(count, offset);
+            if (posts == null || !posts.Any())
+            {
+                return NotFound("No recent posts found.");
+            }
+
+            var postResources = _mapper.Map<IEnumerable<PostResource>>(posts);
+            return Ok(postResources);
+        }
+
+
     }
 }

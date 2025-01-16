@@ -76,12 +76,23 @@ namespace SocialMediaAPI.infrastructure.Repositories
         public async Task<IEnumerable<Posts>> GetPostsSortedByUpvotesAsync(int count)
         {
             return await _context.Posts
-                .Include(post => post.Author)  // Include the Author entity
-                .Include(post => post.Category)  // Include the Category entity
+                .Include(post => post.Author)  
+                .Include(post => post.Category)
                 .OrderByDescending(post => post.UpvotesCount)
                 .Take(count)  // Limit the number of posts returned
                 .ToListAsync();
         }
+        public async Task<IEnumerable<Posts>> GetLatestPostsAsync(int count, int offset)
+        {
+            return await _context.Posts
+                .OrderByDescending(p => p.CreatedAt)
+                .Include(post => post.Author)
+                .Include(post => post.Category)
+                .Skip(offset)
+                .Take(count)
+                .ToListAsync();
+        }
+
 
     }
 

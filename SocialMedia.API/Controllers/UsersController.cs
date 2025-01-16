@@ -2,6 +2,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using SocialMedia.API.Resources.PostResources;
 using SocialMedia.API.Resources.UserResources;
 using SocialMediaAPI.application.Interfaces;
 using SocialMediaAPI.domain.entities;
@@ -168,7 +169,7 @@ public class UsersController : ControllerBase
         return Ok(new { Username = username });
     }
 
-    [Authorize] // Requires authentication
+    [Authorize]
     [HttpGet("posts")]
     public async Task<IActionResult> GetPosts() //gets the signed in user posts
     {
@@ -188,8 +189,12 @@ public class UsersController : ControllerBase
             return NotFound("No posts found for the user.");
         }
 
-        return Ok(posts);
+        // Map to PostResource
+        var postResources = _mapper.Map<IEnumerable<PostResource>>(posts);
+
+        return Ok(postResources);
     }
+
 
 
     [Authorize] // Requires authentication
