@@ -93,6 +93,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
                 .ToListAsync();
         }
 
+        public async Task<int> GetTotalPostsCountAsync()
+        {
+            return await _context.Posts.CountAsync();
+        }
 
     }
 

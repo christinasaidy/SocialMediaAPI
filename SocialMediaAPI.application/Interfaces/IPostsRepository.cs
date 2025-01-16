@@ -18,5 +18,7 @@ namespace SocialMediaAPI.application.Interfaces
         Task<IEnumerable<Posts>> GetPostsSortedByUpvotesAsync(int count);
         Task<IEnumerable<Posts>> GetLatestPostsAsync(int count, int offset);
 
+        Task<int> GetTotalPostsCountAsync();
+
     }
 }

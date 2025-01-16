@@ -17,6 +17,7 @@ namespace SocialMediaAPI.application.Interfaces
         Task DeletePostAsync(int id);
         Task<IEnumerable<Posts>> GetTopPostsByUpvotesAsync(int count);
         Task<IEnumerable<Posts>> GetLatestPostsAsync(int count, int offset);
+        Task<int> GetTotalPostsCountAsync();
 
     }
 }

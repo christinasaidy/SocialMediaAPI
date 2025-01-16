@@ -191,3 +191,4 @@ C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.API\bin\Debug\net8.0\Aut
 C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\saidy\source\repos\SocialMediatest\SocialMedia.API\bin\Debug\net8.0\SocialMedia.API.staticwebassets.runtime.json
+E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMedia.API\bin\Debug\net8.0\SocialMedia.API.staticwebassets.runtime.json

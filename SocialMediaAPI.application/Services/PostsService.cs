@@ -54,5 +54,9 @@ namespace SocialMediaAPI.application.Services
         {
             return await _postsRepository.GetLatestPostsAsync(count, offset);
         }
+        public  async Task<int> GetTotalPostsCountAsync()
+        {
+            return await _postsRepository.GetTotalPostsCountAsync();
+        }
     }
 }

@@ -176,6 +176,11 @@ namespace SocialMedia.API.Controllers
             return Ok(postResources);
         }
 
-
+        [HttpGet("count")]
+        public async Task<IActionResult> GetTotalPostsCount()
+        {
+            var totalPostsCount = await _postsService.GetTotalPostsCountAsync();
+            return Ok(totalPostsCount);
+        }
     }
 }
