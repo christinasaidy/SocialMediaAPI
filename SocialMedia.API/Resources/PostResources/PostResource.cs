@@ -11,6 +11,8 @@ namespace SocialMedia.API.Resources.PostResources
         public string Tags { get; set; } = string.Empty;
         public int Upvotes { get; set; }
         public int Downvotes { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
         public CategoryResource Category { get; set; }
         public UserResource Author { get; set; }

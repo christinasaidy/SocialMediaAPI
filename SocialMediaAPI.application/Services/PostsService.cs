@@ -50,5 +50,9 @@ namespace SocialMediaAPI.application.Services
         {
             return await _postsRepository.GetPostsSortedByUpvotesAsync(count);  // Call the repository to fetch posts
         }
+        public async Task<IEnumerable<Posts>> GetLatestPostsAsync(int count, int offset)
+        {
+            return await _postsRepository.GetLatestPostsAsync(count, offset);
+        }
     }
 }

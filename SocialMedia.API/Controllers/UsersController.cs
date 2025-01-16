@@ -171,7 +171,7 @@ public class UsersController : ControllerBase
 
     [Authorize]
     [HttpGet("posts")]
-    public async Task<IActionResult> GetPosts()
+    public async Task<IActionResult> GetPosts() //gets the signed in user posts
     {
         // Extract the user ID from the token
         var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;

@@ -77,7 +77,11 @@ namespace SocialMedia.API.Mappings
                 .ForMember(dest => dest.Author, opt => opt.MapFrom(src => src.Author))
                 .ForMember(dest => dest.Category, opt => opt.MapFrom(src => src.Category))
                 .ForMember(dest => dest.Upvotes, opt => opt.MapFrom(src => src.UpvotesCount))
-                .ForMember(dest => dest.Downvotes, opt => opt.MapFrom(src => src.DownvotesCount));
+                .ForMember(dest => dest.Downvotes, opt => opt.MapFrom(src => src.DownvotesCount))
+                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt));
+
+
 
 
             // If you want to return Author details in response (e.g. for GetPostById)
