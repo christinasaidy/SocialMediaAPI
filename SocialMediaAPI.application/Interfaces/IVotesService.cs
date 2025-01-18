@@ -10,7 +10,7 @@ namespace SocialMediaAPI.application.Interfaces
     public interface IVotesService
     {
         Task<Votes> GetVoteByIdAsync(int id);
-        Task<Posts> GetPostByIdAsync(int postId); 
+        Task<Posts> GetPostByIdAsync(int postId);
         Task<IEnumerable<Votes>> GetVotesByPostIdAsync(int postId);
         Task<IEnumerable<Votes>> GetVotesByUserIdAsync(int userId);
         Task<Votes> AddVoteAsync(Votes vote);
@@ -20,6 +20,9 @@ namespace SocialMediaAPI.application.Interfaces
         Task<Votes> GetVoteByUserAndPostAsync(int userId, int postId);
         Task UpdatePostAsync(Posts post);
 
-
+        // New methods
+        Task<string> GetVoteStatusAsync(int userId, int postId); // Get the current vote status for a user on a post
+        Task<bool> HandleVoteAsync(int userId, int postId, string voteType); // Add or update a vote
+        Task<bool> RemoveVoteAsync(int userId, int postId); // Optionally, remove a user's vote
     }
 }
