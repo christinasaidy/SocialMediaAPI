@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -16,6 +16,10 @@
     <ProjectReference Include="..\SocialMedia.domain\SocialMediaAPI.domain.csproj" />
     <ProjectReference Include="..\SocialMediaAPI.application\SocialMediaAPI.application.csproj" />
     <ProjectReference Include="..\SocialMediaAPI.infrastructure\SocialMediaAPI.infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\postpictures\" />
   </ItemGroup>
 
 </Project>

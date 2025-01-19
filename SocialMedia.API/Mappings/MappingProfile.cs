@@ -30,7 +30,8 @@ namespace SocialMedia.API.Mappings
                 .ForMember(dest => dest.CategoryId, opt => opt.Ignore())
                 .ForMember(dest => dest.UserId, opt => opt.Ignore())
                 .ForMember(dest => dest.Author, opt => opt.Ignore())   // Avoid direct mapping to Author
-                .ForMember(dest => dest.Category, opt => opt.Ignore()); // Avoid direct mapping to Category
+                .ForMember(dest => dest.Category, opt => opt.Ignore()) // Avoid direct mapping to Category
+               .ForMember(dest => dest.Images, opt => opt.Ignore()); // Map ImagePaths to Image entitie;
 
             CreateMap<CreateNotificationResource, Notifications>()
                 .ForMember(dest => dest.UserId, opt => opt.Ignore())
@@ -85,7 +86,8 @@ namespace SocialMedia.API.Mappings
                 .ForMember(dest => dest.Upvotes, opt => opt.MapFrom(src => src.UpvotesCount))
                 .ForMember(dest => dest.Downvotes, opt => opt.MapFrom(src => src.DownvotesCount))
                 .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
-                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt));
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.ImagePaths, opt => opt.MapFrom(src => src.Images.Select(i => i.ImagePath).ToList()));
 
 
 

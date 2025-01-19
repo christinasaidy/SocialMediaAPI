@@ -1,12 +1,9 @@
-﻿using SocialMediaAPI.application.Interfaces;
+﻿using SocialMediaAPI.Application.Interfaces;
 using SocialMediaAPI.domain.entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace SocialMediaAPI.application.Services
+namespace SocialMediaAPI.Application.Services
 {
     public class PostsService : IPostsService
     {
@@ -46,17 +43,31 @@ namespace SocialMediaAPI.application.Services
         {
             await _postsRepository.DeletePostAsync(id);
         }
+
         public async Task<IEnumerable<Posts>> GetTopPostsByUpvotesAsync(int count)
         {
-            return await _postsRepository.GetPostsSortedByUpvotesAsync(count);  // Call the repository to fetch posts
+            return await _postsRepository.GetPostsSortedByUpvotesAsync(count);
         }
+
         public async Task<IEnumerable<Posts>> GetLatestPostsAsync(int count, int offset)
         {
             return await _postsRepository.GetLatestPostsAsync(count, offset);
         }
-        public  async Task<int> GetTotalPostsCountAsync()
+
+        public async Task<int> GetTotalPostsCountAsync()
         {
             return await _postsRepository.GetTotalPostsCountAsync();
+        }
+
+        // New methods for handling images
+        public async Task AddImagesToPostAsync(int postId, IEnumerable<string> imagePaths)
+        {
+            await _postsRepository.AddImagesToPostAsync(postId, imagePaths);
+        }
+
+        public async Task<IEnumerable<Images>> GetImagesByPostIdAsync(int postId)
+        {
+            return await _postsRepository.GetImagesByPostIdAsync(postId);
         }
     }
 }

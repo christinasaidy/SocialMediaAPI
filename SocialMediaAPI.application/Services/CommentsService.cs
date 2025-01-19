@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SocialMediaAPI.domain.entities;
+using SocialMediaAPI.Application.Interfaces;
 
 
 namespace SocialMediaAPI.application.Services

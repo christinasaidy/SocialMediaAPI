@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SocialMedia.API.Resources.VoteResources;
 using SocialMediaAPI.application.Interfaces;
+using SocialMediaAPI.Application.Interfaces;
 using SocialMediaAPI.domain.entities;
 using System.Collections.Generic;
 using System.Linq;

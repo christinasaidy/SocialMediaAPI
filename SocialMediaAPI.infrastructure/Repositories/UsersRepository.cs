@@ -69,8 +69,12 @@ namespace SocialMediaAPI.infrastructure.Repositories
 
         public async Task<IEnumerable<Posts>> GetPostsByUserIdAsync(int userId)
         {
-            return await _context.Posts.Where(p => p.UserId == userId).ToListAsync();
+            return await _context.Posts
+                .Where(p => p.UserId == userId)
+                .Include(p => p.Images) 
+                .ToListAsync();
         }
+
 
         // GetBioByIdAsync
         public async Task<string?> GetBioByIdAsync(int userId)
