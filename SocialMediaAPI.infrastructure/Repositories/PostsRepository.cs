@@ -33,6 +33,7 @@ namespace SocialMediaAPI.Infrastructure.Repositories
                 .Where(p => p.UserId == userId)
                 .Include(p => p.Author)
                 .Include(p => p.Category)
+                .Include(p=> p.Images)
                 .ToListAsync();
         }
 

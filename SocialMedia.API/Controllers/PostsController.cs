@@ -248,5 +248,18 @@ namespace SocialMedia.API.Controllers
             var totalPostsCount = await _postsService.GetTotalPostsCountAsync();
             return Ok(totalPostsCount);
         }
+
+        [HttpGet("category/{categoryId}")]
+        public async Task<ActionResult<IEnumerable<Posts>>> GetPostsByCategoryId(int categoryId)
+        {
+            var posts = await _postsService.GetPostsByCategoryIdAsync(categoryId);
+
+            if (posts == null || !posts.Any())
+            {
+                return NotFound($"No posts found for category ID {categoryId}.");
+            }
+
+            return Ok(posts);
+        }
     }
 }
