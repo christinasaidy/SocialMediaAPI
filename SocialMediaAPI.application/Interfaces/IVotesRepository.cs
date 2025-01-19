@@ -18,6 +18,9 @@ namespace SocialMediaAPI.application.Interfaces
         Task<Posts> GetPostByIdAsync(int postId);
         Task<Votes> GetVoteByUserAndPostAsync(int userId, int postId);
 
-
+        // New methods
+        Task<string> GetVoteStatusAsync(int userId, int postId); // Get the current vote status (upvoted/downvoted)
+        Task<bool> HandleVoteAsync(int userId, int postId, string voteType); // Add or update a vote
+        Task<bool> RemoveVoteAsync(int userId, int postId); // Optionally remove a user's vote
     }
 }

@@ -73,25 +73,30 @@ namespace SocialMedia.API.Mappings
                 .ForMember(dest => dest.PostId, opt => opt.Ignore())
                 .ForMember(dest => dest.UserId, opt => opt.Ignore());
 
-            // Add mapping from Post to its related Author and Category (to use in response)
+            CreateMap<Votes, VoteResource>()
+                .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.User.UserName))
+                .ForMember(dest => dest.PostTitle, opt => opt.MapFrom(src => src.Post.Title))
+                .ForMember(dest => dest.AuthorName, opt => opt.MapFrom(src => src.Post.Author.UserName))
+                .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Post.Category.Name));
+
+
             CreateMap<Posts, PostResource>()
                 .ForMember(dest => dest.Author, opt => opt.MapFrom(src => src.Author))
                 .ForMember(dest => dest.Category, opt => opt.MapFrom(src => src.Category))
                 .ForMember(dest => dest.Upvotes, opt => opt.MapFrom(src => src.UpvotesCount))
                 .ForMember(dest => dest.Downvotes, opt => opt.MapFrom(src => src.DownvotesCount))
                 .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
-                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt));
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.ImagePaths, opt => opt.MapFrom(src => src.Images.Select(i => i.ImagePath).ToList()));
 
 
 
 
-            // If you want to return Author details in response (e.g. for GetPostById)
             CreateMap<Users, UserResource>()
                 .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.UserName))
                 .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
                 .ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.Role));
 
-            // If you want to return Category details in response (e.g. for GetPostById)
             CreateMap<Categories, CategoryResource>()
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name));
         }

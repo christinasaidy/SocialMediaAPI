@@ -28,6 +28,7 @@ namespace SocialMediaAPI.application.Services
         {
             return await _votesRepository.GetVoteByIdAsync(id);
         }
+
         public async Task<Posts> GetPostByIdAsync(int postId)
         {
             return await _postService.GetPostByIdAsync(postId);
@@ -57,10 +58,12 @@ namespace SocialMediaAPI.application.Services
         {
             await _votesRepository.DeleteVoteAsync(id);
         }
+
         public async Task<Users> GetUserByIdAsync(int userId)
         {
             return await _userService.GetUserByIdAsync(userId);
         }
+
         public async Task<Votes> GetVoteByUserAndPostAsync(int userId, int postId)
         {
             return await _votesRepository.GetVoteByUserAndPostAsync(userId, postId);
@@ -69,6 +72,52 @@ namespace SocialMediaAPI.application.Services
         public async Task UpdatePostAsync(Posts post)
         {
             await _postRepository.UpdatePostAsync(post);
+        }
+
+
+        // Get the current vote status of a user for a given post
+        public async Task<string> GetVoteStatusAsync(int userId, int postId)
+        {
+            var vote = await _votesRepository.GetVoteByUserAndPostAsync(userId, postId);
+            return vote?.VoteType; // Return VoteType (null if no vote)
+        }
+
+        // Handle adding/updating a vote
+        public async Task<bool> HandleVoteAsync(int userId, int postId, string voteType)
+        {
+            var existingVote = await _votesRepository.GetVoteByUserAndPostAsync(userId, postId);
+
+            if (existingVote != null)
+            {
+                // Update the existing vote
+                existingVote.VoteType = voteType;
+                await _votesRepository.UpdateVoteAsync(existingVote);
+            }
+            else
+            {
+                // Add a new vote
+                var newVote = new Votes
+                {
+                    PostId = postId,
+                    UserId = userId,
+                    VoteType = voteType
+                };
+                await _votesRepository.AddVoteAsync(newVote);
+            }
+            return true;
+        }
+
+        public async Task<bool> RemoveVoteAsync(int userId, int postId)
+        {
+            var existingVote = await _votesRepository.GetVoteByUserAndPostAsync(userId, postId);
+
+            if (existingVote != null)
+            {
+                await _votesRepository.DeleteVoteAsync(existingVote.Id);
+                return true;
+            }
+
+            return false;
         }
     }
 }

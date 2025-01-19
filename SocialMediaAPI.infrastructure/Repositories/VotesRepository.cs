@@ -21,22 +21,11 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Votes
                 .Include(v => v.Post)
-                    .ThenInclude(p => p.Author) 
+                    .ThenInclude(p => p.Author)
                 .Include(v => v.Post)
-                    .ThenInclude(p => p.Category) 
-                .Include(v => v.User) 
+                    .ThenInclude(p => p.Category)
+                .Include(v => v.User)
                 .FirstOrDefaultAsync(v => v.Id == id);
-        }
-
-        public async Task<IEnumerable<Votes>> GetAllVotesAsync()
-        {
-            return await _context.Votes
-                .Include(v => v.Post)
-                    .ThenInclude(p => p.Author) 
-                .Include(v => v.Post)
-                    .ThenInclude(p => p.Category) 
-                .Include(v => v.User) 
-                .ToListAsync();
         }
 
         public async Task<IEnumerable<Votes>> GetVotesByPostIdAsync(int postId)
@@ -44,7 +33,7 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return await _context.Votes
                 .Where(v => v.PostId == postId)
                 .Include(v => v.Post)
-                    .ThenInclude(p => p.Author) 
+                    .ThenInclude(p => p.Author)
                 .Include(v => v.Post)
                     .ThenInclude(p => p.Category)
                 .Include(v => v.User)
@@ -56,10 +45,10 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return await _context.Votes
                 .Where(v => v.UserId == userId)
                 .Include(v => v.Post)
-                    .ThenInclude(p => p.Author) 
+                    .ThenInclude(p => p.Author)
                 .Include(v => v.Post)
-                    .ThenInclude(p => p.Category) 
-                .Include(v => v.User) 
+                    .ThenInclude(p => p.Category)
+                .Include(v => v.User)
                 .ToListAsync();
         }
 
@@ -67,14 +56,14 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             await _context.Votes.AddAsync(vote);
             await _context.SaveChangesAsync();
-            return vote; 
+            return vote;
         }
 
         public async Task<Votes> UpdateVoteAsync(Votes vote)
         {
             _context.Votes.Update(vote);
             await _context.SaveChangesAsync();
-            return vote; 
+            return vote;
         }
 
         public async Task DeleteVoteAsync(int id)
@@ -99,5 +88,57 @@ namespace SocialMediaAPI.infrastructure.Repositories
                 .FirstOrDefaultAsync(v => v.UserId == userId && v.PostId == postId);
         }
 
+        // New method to get the current vote status (upvoted/downvoted)
+        public async Task<string> GetVoteStatusAsync(int userId, int postId)
+        {
+            var vote = await _context.Votes
+                .FirstOrDefaultAsync(v => v.UserId == userId && v.PostId == postId);
+
+            return vote?.VoteType; // Could return "Upvote", "Downvote", or null if no vote exists
+        }
+
+        // New method to handle adding or updating a vote
+        public async Task<bool> HandleVoteAsync(int userId, int postId, string voteType)
+        {
+            var existingVote = await _context.Votes
+                .FirstOrDefaultAsync(v => v.UserId == userId && v.PostId == postId);
+
+            if (existingVote != null)
+            {
+                // If vote exists, update it
+                existingVote.VoteType = voteType;
+                _context.Votes.Update(existingVote);
+            }
+            else
+            {
+                // If no vote exists, add a new one
+                var newVote = new Votes
+                {
+                    UserId = userId,
+                    PostId = postId,
+                    VoteType = voteType
+                };
+                await _context.Votes.AddAsync(newVote);
+            }
+
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+        // New method to remove a vote
+        public async Task<bool> RemoveVoteAsync(int userId, int postId)
+        {
+            var existingVote = await _context.Votes
+                .FirstOrDefaultAsync(v => v.UserId == userId && v.PostId == postId);
+
+            if (existingVote != null)
+            {
+                _context.Votes.Remove(existingVote);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+
+            return false;
+        }
     }
 }

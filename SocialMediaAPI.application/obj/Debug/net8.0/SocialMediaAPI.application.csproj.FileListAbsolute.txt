@@ -1,21 +1,3 @@
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.deps.json
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.runtimeconfig.json
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.dll
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.pdb
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.domain.dll
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.domain.pdb
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.csproj.AssemblyReference.cache
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.AssemblyInfoInputs.cache
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.AssemblyInfo.cs
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.csproj.CoreCompileInputs.cache
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMe.2E9D2322.Up2Date
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.dll
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\refint\SocialMediaAPI.application.dll
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.pdb
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.genruntimeconfig.cache
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\ref\SocialMediaAPI.application.dll
-C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.sourcelink.json
 E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.deps.json
 E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.runtimeconfig.json
 E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.dll
@@ -34,3 +16,21 @@ E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.
 E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.pdb
 E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.genruntimeconfig.cache
 E:\IDS internship\Social_Media_Clean_Architecture\SocialMediaAPI\SocialMediaAPI.application\obj\Debug\net8.0\ref\SocialMediaAPI.application.dll
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.deps.json
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.runtimeconfig.json
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.dll
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.application.pdb
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.domain.dll
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\bin\Debug\net8.0\SocialMediaAPI.domain.pdb
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.csproj.AssemblyReference.cache
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.AssemblyInfoInputs.cache
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.AssemblyInfo.cs
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.csproj.CoreCompileInputs.cache
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.sourcelink.json
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMe.2E9D2322.Up2Date
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.dll
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\refint\SocialMediaAPI.application.dll
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.pdb
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\SocialMediaAPI.application.genruntimeconfig.cache
+C:\Users\saidy\source\repos\SocialMediatest\SocialMediaAPI.application\obj\Debug\net8.0\ref\SocialMediaAPI.application.dll

@@ -22,8 +22,10 @@ namespace SocialMediaAPI.Infrastructure.Repositories
             return await _context.Posts
                 .Include(p => p.Author)
                 .Include(p => p.Category)
+                .Include(p => p.Images) // Include the Images collection
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
+
 
         public async Task<IEnumerable<Posts>> GetPostsByUserIdAsync(int userId)
         {
@@ -72,6 +74,7 @@ namespace SocialMediaAPI.Infrastructure.Repositories
             return await _context.Posts
                 .Include(post => post.Author)
                 .Include(post => post.Category)
+                .Include(post => post.Images)
                 .OrderByDescending(post => post.UpvotesCount)
                 .Take(count)
                 .ToListAsync();
@@ -83,6 +86,7 @@ namespace SocialMediaAPI.Infrastructure.Repositories
                 .OrderByDescending(p => p.CreatedAt)
                 .Include(post => post.Author)
                 .Include(post => post.Category)
+                .Include(post => post.Images)
                 .Skip(offset)
                 .Take(count)
                 .ToListAsync();
@@ -121,6 +125,9 @@ namespace SocialMediaAPI.Infrastructure.Repositories
         {
             return await _context.Images
                 .Where(img => img.PostId == postId)
+                .Include(img => img.Post)
+                 .Include(img => img.Post.Author)
+                 .Include(img => img.Post.Category)
                 .ToListAsync();
         }
     }
