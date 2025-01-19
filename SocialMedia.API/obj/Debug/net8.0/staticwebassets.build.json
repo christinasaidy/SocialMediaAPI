@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "zOXaAgXvxRnz5K9TV7ndBEygRvmTSezjkcB0m6JkBpQ=",
+=======
+  "Hash": "buDV8GwDBoCQj0m18ZBP2zFjsRVdrkv9gtfgoVukMKs=",
+>>>>>>> bb0c4644704ecaf1d5ae73ee24fed6f8856fffea
   "Source": "SocialMedia.API",
   "BasePath": "_content/SocialMedia.API",
   "Mode": "Default",
@@ -245,7 +249,49 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\55a77633-d27d-4f1f-9ffd-d4836fdbe019_cat4-removebg-preview.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\a1cd2d19-2538-45d0-959f-a89f0a74a991_Screenshot 2024-11-30 173422.png",
+=======
+      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\88f758eb-403a-4ced-bd99-95a4993ee873_bee (1).png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/88f758eb-403a-4ced-bd99-95a4993ee873_bee (1).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\88f758eb-403a-4ced-bd99-95a4993ee873_bee (1).png"
+    },
+    {
+      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\b868837c-7fb1-47cf-9a6d-177ffef99a99_manni-removebg-preview.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/b868837c-7fb1-47cf-9a6d-177ffef99a99_manni-removebg-preview.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\b868837c-7fb1-47cf-9a6d-177ffef99a99_manni-removebg-preview.png"
+    },
+    {
+      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\e12551e0-19c2-4517-901f-5db40496bffe_cat3-removebg-preview.png",
+>>>>>>> bb0c4644704ecaf1d5ae73ee24fed6f8856fffea
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
