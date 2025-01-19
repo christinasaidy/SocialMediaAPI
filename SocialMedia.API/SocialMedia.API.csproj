@@ -18,4 +18,8 @@
     <ProjectReference Include="..\SocialMediaAPI.infrastructure\SocialMediaAPI.infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\postpictures\" />
+  </ItemGroup>
+
 </Project>

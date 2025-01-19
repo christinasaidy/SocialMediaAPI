@@ -1,14 +1,12 @@
 ﻿using SocialMediaAPI.domain.entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace SocialMediaAPI.application.Interfaces
+namespace SocialMediaAPI.Application.Interfaces
 {
     public interface IPostsService
     {
+        // Existing methods for handling posts
         Task<Posts> GetPostByIdAsync(int id);
         Task<IEnumerable<Posts>> GetPostsByCategoryIdAsync(int categoryId);
         Task<IEnumerable<Posts>> GetPostsByUserIdAsync(int userId);
@@ -19,5 +17,8 @@ namespace SocialMediaAPI.application.Interfaces
         Task<IEnumerable<Posts>> GetLatestPostsAsync(int count, int offset);
         Task<int> GetTotalPostsCountAsync();
 
+        // New methods for handling images
+        Task AddImagesToPostAsync(int postId, IEnumerable<string> imagePaths);  // Adds images to a post
+        Task<IEnumerable<Images>> GetImagesByPostIdAsync(int postId);  // Retrieves images for a specific post
     }
 }

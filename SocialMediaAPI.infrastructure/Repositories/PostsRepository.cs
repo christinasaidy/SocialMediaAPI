@@ -1,4 +1,4 @@
-﻿using SocialMediaAPI.application.Interfaces;
+﻿using SocialMediaAPI.Application.Interfaces;
 using SocialMediaAPI.domain.entities;
 using SocialMediaAPI.infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SocialMediaAPI.infrastructure.Repositories
+namespace SocialMediaAPI.Infrastructure.Repositories
 {
     public class PostsRepository : IPostsRepository
     {
@@ -24,20 +24,13 @@ namespace SocialMediaAPI.infrastructure.Repositories
                 .Include(p => p.Category)
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
-        public async Task<IEnumerable<Posts>> GetAllPostsAsync()
-        {
-            return await _context.Posts
-                .Include(p => p.Author)  
-                .Include(p => p.Category) 
-                .ToListAsync();
-        }
 
         public async Task<IEnumerable<Posts>> GetPostsByUserIdAsync(int userId)
         {
             return await _context.Posts
                 .Where(p => p.UserId == userId)
-                .Include(p => p.Author)  
-                .Include(p => p.Category) 
+                .Include(p => p.Author)
+                .Include(p => p.Category)
                 .ToListAsync();
         }
 
@@ -45,8 +38,8 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Posts
                 .Where(p => p.CategoryId == categoryId)
-                .Include(p => p.Author)  
-                .Include(p => p.Category) 
+                .Include(p => p.Author)
+                .Include(p => p.Category)
                 .ToListAsync();
         }
 
@@ -54,14 +47,14 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             await _context.Posts.AddAsync(post);
             await _context.SaveChangesAsync();
-            return post; 
+            return post;
         }
 
         public async Task<Posts> UpdatePostAsync(Posts post)
         {
             _context.Posts.Update(post);
             await _context.SaveChangesAsync();
-            return post; 
+            return post;
         }
 
         public async Task DeletePostAsync(int id)
@@ -73,15 +66,17 @@ namespace SocialMediaAPI.infrastructure.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+
         public async Task<IEnumerable<Posts>> GetPostsSortedByUpvotesAsync(int count)
         {
             return await _context.Posts
-                .Include(post => post.Author)  
+                .Include(post => post.Author)
                 .Include(post => post.Category)
                 .OrderByDescending(post => post.UpvotesCount)
-                .Take(count)  // Limit the number of posts returned
+                .Take(count)
                 .ToListAsync();
         }
+
         public async Task<IEnumerable<Posts>> GetLatestPostsAsync(int count, int offset)
         {
             return await _context.Posts
@@ -98,6 +93,35 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return await _context.Posts.CountAsync();
         }
 
-    }
+        // New methods for handling images
+        public async Task AddImagesToPostAsync(int postId, IEnumerable<string> imagePaths)
+        {
+            var post = await _context.Posts.FindAsync(postId);
+            if (post == null) return;
 
+            // Create Image entities and store their paths in the database
+            foreach (var path in imagePaths)
+            {
+                var image = new Images
+                {
+                    PostId = postId,
+                    ImagePath = path, // Store the relative path
+                    CreatedAt = DateTime.UtcNow
+                };
+
+                await _context.Images.AddAsync(image);
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+
+
+        public async Task<IEnumerable<Images>> GetImagesByPostIdAsync(int postId)
+        {
+            return await _context.Images
+                .Where(img => img.PostId == postId)
+                .ToListAsync();
+        }
+    }
 }

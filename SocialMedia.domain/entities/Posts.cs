@@ -1,5 +1,6 @@
 ﻿using SocialMediaAPI.domain.entities;
 using System.ComponentModel.DataAnnotations.Schema;
+using static System.Net.Mime.MediaTypeNames;
 
 public class Posts
 {
@@ -27,5 +28,8 @@ public class Posts
     public Users Author { get; set; }
 
     [ForeignKey("CategoryId")]
-    public Categories Category { get; set; } 
+    public Categories Category { get; set; }
+
+    public ICollection<Images> Images { get; set; } = new List<Images>(); // This represents the images associated with the post
 }
+

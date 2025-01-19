@@ -1,12 +1,16 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using SocialMediaAPI.application.Interfaces;
-using SocialMediaAPI.infrastructure.Data;
-using SocialMediaAPI.infrastructure.Repositories;
-using SocialMediaAPI.application.Services;
+using SocialMediaAPI.Application.Interfaces;
+using SocialMediaAPI.Infrastructure.Repositories;
+using SocialMediaAPI.Application.Services;
 using SocialMedia.API.Mappings;
 using System.Text;
+using Microsoft.Extensions.FileProviders;
+using SocialMediaAPI.application.Interfaces;
+using SocialMediaAPI.application.Services;
+using SocialMediaAPI.infrastructure.Data;
+using SocialMediaAPI.infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -111,11 +115,17 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// Ensure the directory for profile pictures exists
+// Ensure the directories for profile pictures and post images exist
 var profilePicturesDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "profile-pictures");
 if (!Directory.Exists(profilePicturesDirectory))
 {
     Directory.CreateDirectory(profilePicturesDirectory);
+}
+
+var postPicturesDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "postpictures");
+if (!Directory.Exists(postPicturesDirectory))
+{
+    Directory.CreateDirectory(postPicturesDirectory);
 }
 
 var app = builder.Build();
@@ -135,7 +145,16 @@ app.UseCors("AllowAll");
 // Enable authentication and authorization middleware
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseStaticFiles(); // Enables static file serving from wwwroot folder
+
+// Enable static file serving from wwwroot folder (including postpictures and profile-pictures)
+app.UseStaticFiles();
+
+// Optional: Add static file serving for postpictures folder
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "postpictures")),
+    RequestPath = "/postpictures"
+});
 
 app.MapControllers();
 

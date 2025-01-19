@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "scpTN8EJ8anBFfyhJXpbnTLGzYwMg4/9ZFm/sWe8HfR4eu7Tqb3nrUnETISd+WC7caP3M+9PAFLTAFjD0Zun+w==",
+  "dgSpecHash": "zfnRHlCi34Q=",
   "success": true,
-  "projectFilePath": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.domain\\SocialMediaAPI.domain.csproj",
+  "projectFilePath": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.domain\\SocialMediaAPI.domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

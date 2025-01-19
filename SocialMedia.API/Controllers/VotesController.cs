@@ -5,6 +5,7 @@ using SocialMedia.API.Resources.CommentResources;
 using SocialMedia.API.Resources.VoteResources;
 using SocialMediaAPI.application.Interfaces;
 using SocialMediaAPI.application.Services;
+using SocialMediaAPI.Application.Interfaces;
 using SocialMediaAPI.domain.entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;

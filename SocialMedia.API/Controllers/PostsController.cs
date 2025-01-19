@@ -7,6 +7,7 @@ using SocialMedia.API.Resources.UserResources;
 using SocialMediaAPI.application.Interfaces;
 using SocialMediaAPI.domain.entities;
 using System.Security.Claims;
+using SocialMediaAPI.Application.Interfaces;
 
 namespace SocialMedia.API.Controllers
 {
@@ -32,7 +33,6 @@ namespace SocialMedia.API.Controllers
         public async Task<IActionResult> CreatePost([FromBody] CreatePostResource postCreateDto)
         {
             var userId = GetUserIdFromToken();
-            Console.WriteLine($"User ID: {userId}");
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -70,6 +70,7 @@ namespace SocialMedia.API.Controllers
             return CreatedAtAction(nameof(GetPostById), new { id = createdPost.Id }, postResource);
         }
 
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPostById(int id)
         {
@@ -81,10 +82,76 @@ namespace SocialMedia.API.Controllers
             return Ok(postResource);
         }
 
+        // New endpoint for retrieving images associated with a post
+        [HttpGet("{id}/images")]
+        public async Task<IActionResult> GetImagesByPostId(int id)
+        {
+            var images = await _postsService.GetImagesByPostIdAsync(id);
+            if (images == null || !images.Any())
+            {
+                return NotFound("No images found for this post.");
+            }
+
+            return Ok(images);
+        }
+
+        // New endpoint for adding images to a post
+        [Authorize]
+        [HttpPost("{id}/images")]
+        public async Task<IActionResult> AddImagesToPost(int id, [FromForm] List<IFormFile> imageFiles)
+        {
+            var userId = GetUserIdFromToken();
+
+            if (userId == 0)
+            {
+                return Unauthorized("User is not authenticated.");
+            }
+
+            var post = await _postsService.GetPostByIdAsync(id);
+            if (post == null)
+            {
+                return NotFound("Post not found.");
+            }
+
+            if (post.UserId != userId)
+            {
+                return Unauthorized("You are not authorized to add images to this post.");
+            }
+
+            var postImages = new List<string>();
+
+            // Process each uploaded image file
+            foreach (var file in imageFiles)
+            {
+                if (file.Length > 0)
+                {
+                    // Generate a unique file name for the image (optional)
+                    var fileName = $"{Guid.NewGuid()}_{file.FileName}";
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "postpictures", fileName);
+
+                    // Save the image to the file system
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await file.CopyToAsync(stream);
+                    }
+
+                    // Add the image path to the list (this could be stored in the database)
+                    postImages.Add($"/postpictures/{fileName}");
+                }
+            }
+
+            // Save the image paths to the post (optional step)
+            if (postImages.Any())
+            {
+                await _postsService.AddImagesToPostAsync(id, postImages);
+            }
+
+            return NoContent();
+        }
+
         private int GetUserIdFromToken()
         {
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId");
-            Console.WriteLine($"User ID Claim: {userIdClaim?.Value}");
             return userIdClaim != null ? int.Parse(userIdClaim.Value) : 0;
         }
 
@@ -118,7 +185,7 @@ namespace SocialMedia.API.Controllers
         public async Task<IActionResult> UpdatePost(int id, [FromBody] UpdatePostResource postUpdateDto)
         {
             var userId = GetUserIdFromToken();
-            Console.WriteLine($"User ID: {userId}");
+
             if (userId == 0)
             {
                 return Unauthorized("User is not authenticated.");
@@ -136,8 +203,7 @@ namespace SocialMedia.API.Controllers
             }
 
             _mapper.Map(postUpdateDto, post);
-
-            post.UpdatedAt = DateTime.UtcNow;  // Update the timestamp
+            post.UpdatedAt = DateTime.UtcNow;
 
             var updatedPost = await _postsService.UpdatePostAsync(post);
 

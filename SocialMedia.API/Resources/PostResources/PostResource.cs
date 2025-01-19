@@ -16,5 +16,7 @@ namespace SocialMedia.API.Resources.PostResources
 
         public CategoryResource Category { get; set; }
         public UserResource Author { get; set; }
+
+        public List<string> ImagePaths { get; set; } = new List<string>();
     }
 }

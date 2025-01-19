@@ -18,5 +18,6 @@ namespace SocialMediaAPI.infrastructure.Data
         public DbSet<Comments> Comments { get; set; }
         public DbSet<Notifications> Notifications { get; set; }
         public DbSet<Votes> Votes { get; set; }
+        public DbSet<Images> Images { get; set; }
     }
 }

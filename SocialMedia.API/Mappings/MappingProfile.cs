@@ -30,7 +30,8 @@ namespace SocialMedia.API.Mappings
                 .ForMember(dest => dest.CategoryId, opt => opt.Ignore())
                 .ForMember(dest => dest.UserId, opt => opt.Ignore())
                 .ForMember(dest => dest.Author, opt => opt.Ignore())   // Avoid direct mapping to Author
-                .ForMember(dest => dest.Category, opt => opt.Ignore()); // Avoid direct mapping to Category
+                .ForMember(dest => dest.Category, opt => opt.Ignore()) // Avoid direct mapping to Category
+               .ForMember(dest => dest.Images, opt => opt.Ignore()); // Map ImagePaths to Image entitie;
 
             CreateMap<CreateNotificationResource, Notifications>()
                 .ForMember(dest => dest.UserId, opt => opt.Ignore())

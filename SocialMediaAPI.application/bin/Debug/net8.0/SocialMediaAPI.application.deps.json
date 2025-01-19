@@ -1041,7 +1041,10 @@
       },
       "SocialMediaAPI.domain/1.0.0": {
         "runtime": {
-          "SocialMediaAPI.domain.dll": {}
+          "SocialMediaAPI.domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
