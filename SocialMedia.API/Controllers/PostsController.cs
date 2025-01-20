@@ -95,11 +95,16 @@ namespace SocialMedia.API.Controllers
             return Ok(images);
         }
 
-        // New endpoint for adding images to a post
         [Authorize]
         [HttpPost("{id}/images")]
         public async Task<IActionResult> AddImagesToPost(int id, [FromForm] List<IFormFile> imageFiles)
         {
+            // Validate the number of images
+            if (imageFiles == null || imageFiles.Count > 4)
+            {
+                return BadRequest("You can upload a maximum of 4 images per post.");
+            }
+
             var userId = GetUserIdFromToken();
 
             if (userId == 0)
@@ -259,7 +264,9 @@ namespace SocialMedia.API.Controllers
                 return NotFound($"No posts found for category ID {categoryId}.");
             }
 
-            return Ok(posts);
+            var postResources = _mapper.Map<IEnumerable<PostResource>>(posts);
+
+            return Ok(postResources);
         }
     }
 }

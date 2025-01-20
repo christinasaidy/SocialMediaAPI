@@ -46,11 +46,12 @@ namespace SocialMedia.API.Controllers
 
             if (voteResources == null || !voteResources.Any())
             {
-                return NotFound("No votes found for the given post.");
+                return NotFound(new { message = "No votes found for the given post." });
             }
 
             return Ok(voteResources);
         }
+
 
         [Authorize]
         [HttpPost]
