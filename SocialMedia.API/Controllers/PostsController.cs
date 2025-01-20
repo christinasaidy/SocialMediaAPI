@@ -264,7 +264,9 @@ namespace SocialMedia.API.Controllers
                 return NotFound($"No posts found for category ID {categoryId}.");
             }
 
-            return Ok(posts);
+            var postResources = _mapper.Map<IEnumerable<PostResource>>(posts);
+
+            return Ok(postResources);
         }
     }
 }
