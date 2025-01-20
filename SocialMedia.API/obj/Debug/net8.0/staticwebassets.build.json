@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i5ZMyjjXrGL2EBBUkMhBsFNq/aN9ZolLnVv2cendpcU=",
+  "Hash": "k8SXKEwNYRcqOgomVBgi8qURtYa8YexPWW71mc4tL4s=",
   "Source": "SocialMedia.API",
   "BasePath": "_content/SocialMedia.API",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postpictures\\2a65fdf6-a906-452b-bc65-c0e58791e652_Untitled design (30).png"
+    },
+    {
+      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\2b29160f-419f-4627-a40a-ed88cd32257f_figma.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/2b29160f-419f-4627-a40a-ed88cd32257f_figma.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\2b29160f-419f-4627-a40a-ed88cd32257f_figma.png"
     },
     {
       "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\2bab994e-88a0-468d-bf70-1ed9acebb15a_failedbanks.jpg",
