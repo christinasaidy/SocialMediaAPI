@@ -335,6 +335,21 @@ public class UsersController : ControllerBase
             return StatusCode(500, "Internal server error while processing the file.");
         }
     }
+    [Authorize] // Requires authentication
+    [HttpGet("profile-picture/{id}")]
+    public async Task<IActionResult> GetProfilePictureById(int id)
+    {
+        // Fetch the profile picture URL using the service
+        var profilePictureUrl = await _usersService.GetProfilePictureByIdAsync(id);
+
+        if (string.IsNullOrEmpty(profilePictureUrl))
+        {
+            return NotFound("Profile picture not found.");
+        }
+
+        return Ok(new { ProfilePictureUrl = profilePictureUrl });
+    }
+
 
 
 
