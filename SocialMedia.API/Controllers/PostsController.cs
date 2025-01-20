@@ -8,6 +8,7 @@ using SocialMediaAPI.application.Interfaces;
 using SocialMediaAPI.domain.entities;
 using System.Security.Claims;
 using SocialMediaAPI.Application.Interfaces;
+using SocialMediaAPI.Application.Services;
 
 namespace SocialMedia.API.Controllers
 {
@@ -268,5 +269,14 @@ namespace SocialMedia.API.Controllers
 
             return Ok(postResources);
         }
+
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchPosts(string query)
+        {
+            var posts = await _postsService.SearchPostsAsync(query);
+            var postResources = _mapper.Map<IEnumerable<PostResource>>(posts);
+            return Ok(postResources);
+        }
+
     }
 }

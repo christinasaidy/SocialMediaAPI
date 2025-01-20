@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i5ZMyjjXrGL2EBBUkMhBsFNq/aN9ZolLnVv2cendpcU=",
+  "Hash": "TaQ7bLwY/86qE97pob02o9QzCF3ovV/bYogqAshVOcQ=",
   "Source": "SocialMedia.API",
   "BasePath": "_content/SocialMedia.API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "SocialMedia.API\\wwwroot",
       "Source": "SocialMedia.API",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\0739fc48-e351-4ae4-850c-0d8e49dab465_marialogo.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\0739fc48-e351-4ae4-850c-0d8e49dab465_marialogo.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/0739fc48-e351-4ae4-850c-0d8e49dab465_marialogo.png",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\0739fc48-e351-4ae4-850c-0d8e49dab465_marialogo.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\0e4fb3f9-040a-4aaa-b5e6-cd3c29076c43_Untitled design (13).png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\0e4fb3f9-040a-4aaa-b5e6-cd3c29076c43_Untitled design (13).png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/0e4fb3f9-040a-4aaa-b5e6-cd3c29076c43_Untitled design (13).png",
       "AssetKind": "All",
@@ -55,10 +55,29 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\0e4fb3f9-040a-4aaa-b5e6-cd3c29076c43_Untitled design (13).png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\1f06e955-1a6b-485c-9ad0-9531c3dc6e3a_cat3-removebg-preview.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\1be4b0be-4219-45ff-b60f-ac951364666f_Screenshot 2023-08-12 180749.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/1be4b0be-4219-45ff-b60f-ac951364666f_Screenshot 2023-08-12 180749.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\1be4b0be-4219-45ff-b60f-ac951364666f_Screenshot 2023-08-12 180749.png"
+    },
+    {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\1f06e955-1a6b-485c-9ad0-9531c3dc6e3a_cat3-removebg-preview.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/1f06e955-1a6b-485c-9ad0-9531c3dc6e3a_cat3-removebg-preview.png",
       "AssetKind": "All",
@@ -74,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\1f06e955-1a6b-485c-9ad0-9531c3dc6e3a_cat3-removebg-preview.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\2258b09a-2c44-4bc4-8e1b-203d0d615532_pot-of-gold.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\2258b09a-2c44-4bc4-8e1b-203d0d615532_pot-of-gold.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/2258b09a-2c44-4bc4-8e1b-203d0d615532_pot-of-gold.png",
       "AssetKind": "All",
@@ -93,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\2258b09a-2c44-4bc4-8e1b-203d0d615532_pot-of-gold.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\2a65fdf6-a906-452b-bc65-c0e58791e652_Untitled design (30).png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\2a65fdf6-a906-452b-bc65-c0e58791e652_Untitled design (30).png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/2a65fdf6-a906-452b-bc65-c0e58791e652_Untitled design (30).png",
       "AssetKind": "All",
@@ -112,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\2a65fdf6-a906-452b-bc65-c0e58791e652_Untitled design (30).png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\2bab994e-88a0-468d-bf70-1ed9acebb15a_failedbanks.jpg",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\2bab994e-88a0-468d-bf70-1ed9acebb15a_failedbanks.jpg",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/2bab994e-88a0-468d-bf70-1ed9acebb15a_failedbanks.jpg",
       "AssetKind": "All",
@@ -131,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\2bab994e-88a0-468d-bf70-1ed9acebb15a_failedbanks.jpg"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\2c67d075-1752-4b26-a5ef-d7673acb1da3_nerds6.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\2c67d075-1752-4b26-a5ef-d7673acb1da3_nerds6.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/2c67d075-1752-4b26-a5ef-d7673acb1da3_nerds6.png",
       "AssetKind": "All",
@@ -150,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\2c67d075-1752-4b26-a5ef-d7673acb1da3_nerds6.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\2f85b8c1-06de-41f9-b0b2-3a4a3f457d50_Screenshot (20).png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\2f85b8c1-06de-41f9-b0b2-3a4a3f457d50_Screenshot (20).png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/2f85b8c1-06de-41f9-b0b2-3a4a3f457d50_Screenshot (20).png",
       "AssetKind": "All",
@@ -169,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\2f85b8c1-06de-41f9-b0b2-3a4a3f457d50_Screenshot (20).png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\33795539-c57f-4574-aaaf-1c5ec34c6fcd_Screenshot 2023-08-12 180749.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\33795539-c57f-4574-aaaf-1c5ec34c6fcd_Screenshot 2023-08-12 180749.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/33795539-c57f-4574-aaaf-1c5ec34c6fcd_Screenshot 2023-08-12 180749.png",
       "AssetKind": "All",
@@ -188,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\33795539-c57f-4574-aaaf-1c5ec34c6fcd_Screenshot 2023-08-12 180749.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\3cee7556-fb8a-4c1d-a920-3b8d1e48088a_Screenshot 2023-08-12 175431.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\3cee7556-fb8a-4c1d-a920-3b8d1e48088a_Screenshot 2023-08-12 175431.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/3cee7556-fb8a-4c1d-a920-3b8d1e48088a_Screenshot 2023-08-12 175431.png",
       "AssetKind": "All",
@@ -207,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\3cee7556-fb8a-4c1d-a920-3b8d1e48088a_Screenshot 2023-08-12 175431.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\41a1fb0a-d48d-4429-a987-73a0e8dae3f4_nerds5.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\41a1fb0a-d48d-4429-a987-73a0e8dae3f4_nerds5.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/41a1fb0a-d48d-4429-a987-73a0e8dae3f4_nerds5.png",
       "AssetKind": "All",
@@ -226,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\41a1fb0a-d48d-4429-a987-73a0e8dae3f4_nerds5.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\46ade1f9-1ec9-40ac-a3be-7bcf54e2d669_nerds4.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\46ade1f9-1ec9-40ac-a3be-7bcf54e2d669_nerds4.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/46ade1f9-1ec9-40ac-a3be-7bcf54e2d669_nerds4.png",
       "AssetKind": "All",
@@ -245,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\46ade1f9-1ec9-40ac-a3be-7bcf54e2d669_nerds4.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\48fa1568-b445-4d13-8a2c-bee8820e1a42_Screenshot 2023-08-12 180749.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\48fa1568-b445-4d13-8a2c-bee8820e1a42_Screenshot 2023-08-12 180749.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/48fa1568-b445-4d13-8a2c-bee8820e1a42_Screenshot 2023-08-12 180749.png",
       "AssetKind": "All",
@@ -264,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\48fa1568-b445-4d13-8a2c-bee8820e1a42_Screenshot 2023-08-12 180749.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\50cd7856-2f17-44fd-bb0d-bc128a36f238_failedbanks.jpg",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\50cd7856-2f17-44fd-bb0d-bc128a36f238_failedbanks.jpg",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/50cd7856-2f17-44fd-bb0d-bc128a36f238_failedbanks.jpg",
       "AssetKind": "All",
@@ -283,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\50cd7856-2f17-44fd-bb0d-bc128a36f238_failedbanks.jpg"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\5154cd29-47ce-4be8-8b83-bc83a5e535b1_Screenshot 2024-11-30 174333.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\5154cd29-47ce-4be8-8b83-bc83a5e535b1_Screenshot 2024-11-30 174333.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/5154cd29-47ce-4be8-8b83-bc83a5e535b1_Screenshot 2024-11-30 174333.png",
       "AssetKind": "All",
@@ -302,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\5154cd29-47ce-4be8-8b83-bc83a5e535b1_Screenshot 2024-11-30 174333.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\559374ba-d478-4a36-9e20-6f7547200183_cat3-removebg-preview.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\559374ba-d478-4a36-9e20-6f7547200183_cat3-removebg-preview.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/559374ba-d478-4a36-9e20-6f7547200183_cat3-removebg-preview.png",
       "AssetKind": "All",
@@ -321,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\559374ba-d478-4a36-9e20-6f7547200183_cat3-removebg-preview.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\55a77633-d27d-4f1f-9ffd-d4836fdbe019_cat4-removebg-preview.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\55a77633-d27d-4f1f-9ffd-d4836fdbe019_cat4-removebg-preview.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/55a77633-d27d-4f1f-9ffd-d4836fdbe019_cat4-removebg-preview.png",
       "AssetKind": "All",
@@ -340,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\55a77633-d27d-4f1f-9ffd-d4836fdbe019_cat4-removebg-preview.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\5d8d918f-48f7-406f-b9e7-f8d3ffa036f4_Untitled_design__30_-removebg-preview.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\5d8d918f-48f7-406f-b9e7-f8d3ffa036f4_Untitled_design__30_-removebg-preview.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/5d8d918f-48f7-406f-b9e7-f8d3ffa036f4_Untitled_design__30_-removebg-preview.png",
       "AssetKind": "All",
@@ -359,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\5d8d918f-48f7-406f-b9e7-f8d3ffa036f4_Untitled_design__30_-removebg-preview.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\6bc402fc-9c07-4f5d-b54a-65d822f3bb6e_Untitled_design__30_-removebg-preview.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\6bc402fc-9c07-4f5d-b54a-65d822f3bb6e_Untitled_design__30_-removebg-preview.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/6bc402fc-9c07-4f5d-b54a-65d822f3bb6e_Untitled_design__30_-removebg-preview.png",
       "AssetKind": "All",
@@ -378,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\6bc402fc-9c07-4f5d-b54a-65d822f3bb6e_Untitled_design__30_-removebg-preview.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\768cd080-785e-4a86-b974-d8c016f862e0_Screenshot 2023-08-12 175431.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\768cd080-785e-4a86-b974-d8c016f862e0_Screenshot 2023-08-12 175431.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/768cd080-785e-4a86-b974-d8c016f862e0_Screenshot 2023-08-12 175431.png",
       "AssetKind": "All",
@@ -397,10 +416,29 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\768cd080-785e-4a86-b974-d8c016f862e0_Screenshot 2023-08-12 175431.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\88f758eb-403a-4ced-bd99-95a4993ee873_bee (1).png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\7e1aa280-4847-4cf9-b912-3775fb65eb92_Screenshot 2023-08-12 180749.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/7e1aa280-4847-4cf9-b912-3775fb65eb92_Screenshot 2023-08-12 180749.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\7e1aa280-4847-4cf9-b912-3775fb65eb92_Screenshot 2023-08-12 180749.png"
+    },
+    {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\88f758eb-403a-4ced-bd99-95a4993ee873_bee (1).png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/88f758eb-403a-4ced-bd99-95a4993ee873_bee (1).png",
       "AssetKind": "All",
@@ -416,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\88f758eb-403a-4ced-bd99-95a4993ee873_bee (1).png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\91f67097-1b8f-4e88-82fd-8f9c106968c4_Untitled design (29).png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\91f67097-1b8f-4e88-82fd-8f9c106968c4_Untitled design (29).png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/91f67097-1b8f-4e88-82fd-8f9c106968c4_Untitled design (29).png",
       "AssetKind": "All",
@@ -435,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\91f67097-1b8f-4e88-82fd-8f9c106968c4_Untitled design (29).png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\942b3deb-ba66-4a92-a9d6-f5089ea9c0aa_Untitled design (30).png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\942b3deb-ba66-4a92-a9d6-f5089ea9c0aa_Untitled design (30).png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/942b3deb-ba66-4a92-a9d6-f5089ea9c0aa_Untitled design (30).png",
       "AssetKind": "All",
@@ -454,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\942b3deb-ba66-4a92-a9d6-f5089ea9c0aa_Untitled design (30).png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\9475d5aa-73a6-4f50-8c24-72cc52c0faad_Screenshot 2023-08-12 180749.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\9475d5aa-73a6-4f50-8c24-72cc52c0faad_Screenshot 2023-08-12 180749.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/9475d5aa-73a6-4f50-8c24-72cc52c0faad_Screenshot 2023-08-12 180749.png",
       "AssetKind": "All",
@@ -473,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\9475d5aa-73a6-4f50-8c24-72cc52c0faad_Screenshot 2023-08-12 180749.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\9dc34db0-a64f-4adc-b9b8-7f1b4bd5a89b_Screenshot 2023-08-12 180749.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\9dc34db0-a64f-4adc-b9b8-7f1b4bd5a89b_Screenshot 2023-08-12 180749.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/9dc34db0-a64f-4adc-b9b8-7f1b4bd5a89b_Screenshot 2023-08-12 180749.png",
       "AssetKind": "All",
@@ -492,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\9dc34db0-a64f-4adc-b9b8-7f1b4bd5a89b_Screenshot 2023-08-12 180749.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\a1cd2d19-2538-45d0-959f-a89f0a74a991_Screenshot 2024-11-30 173422.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\a1cd2d19-2538-45d0-959f-a89f0a74a991_Screenshot 2024-11-30 173422.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/a1cd2d19-2538-45d0-959f-a89f0a74a991_Screenshot 2024-11-30 173422.png",
       "AssetKind": "All",
@@ -511,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\a1cd2d19-2538-45d0-959f-a89f0a74a991_Screenshot 2024-11-30 173422.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\b60456a4-133d-4af5-926b-8ac695308ba9_Screenshot 2024-11-30 173422.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\b60456a4-133d-4af5-926b-8ac695308ba9_Screenshot 2024-11-30 173422.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/b60456a4-133d-4af5-926b-8ac695308ba9_Screenshot 2024-11-30 173422.png",
       "AssetKind": "All",
@@ -530,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\b60456a4-133d-4af5-926b-8ac695308ba9_Screenshot 2024-11-30 173422.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\b868837c-7fb1-47cf-9a6d-177ffef99a99_manni-removebg-preview.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\b868837c-7fb1-47cf-9a6d-177ffef99a99_manni-removebg-preview.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/b868837c-7fb1-47cf-9a6d-177ffef99a99_manni-removebg-preview.png",
       "AssetKind": "All",
@@ -549,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\b868837c-7fb1-47cf-9a6d-177ffef99a99_manni-removebg-preview.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\c3175033-97df-4698-a4e0-8ef162384e3c_nerds3-removebg-preview.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\c3175033-97df-4698-a4e0-8ef162384e3c_nerds3-removebg-preview.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/c3175033-97df-4698-a4e0-8ef162384e3c_nerds3-removebg-preview.png",
       "AssetKind": "All",
@@ -568,10 +606,48 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\c3175033-97df-4698-a4e0-8ef162384e3c_nerds3-removebg-preview.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\e0139b65-60b7-4b86-afba-2afe06d4ac83_Screenshot 2023-08-12 180749.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\c6266207-d65a-4ae5-b7b6-b87c9d79637d_Screenshot 2023-08-12 175431.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/c6266207-d65a-4ae5-b7b6-b87c9d79637d_Screenshot 2023-08-12 175431.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\c6266207-d65a-4ae5-b7b6-b87c9d79637d_Screenshot 2023-08-12 175431.png"
+    },
+    {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\d840f53b-237f-4da1-bd43-e0e9677702d5_Screenshot 2023-08-12 175431.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/d840f53b-237f-4da1-bd43-e0e9677702d5_Screenshot 2023-08-12 175431.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\d840f53b-237f-4da1-bd43-e0e9677702d5_Screenshot 2023-08-12 175431.png"
+    },
+    {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\e0139b65-60b7-4b86-afba-2afe06d4ac83_Screenshot 2023-08-12 180749.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/e0139b65-60b7-4b86-afba-2afe06d4ac83_Screenshot 2023-08-12 180749.png",
       "AssetKind": "All",
@@ -587,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\e0139b65-60b7-4b86-afba-2afe06d4ac83_Screenshot 2023-08-12 180749.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\e12551e0-19c2-4517-901f-5db40496bffe_cat3-removebg-preview.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\e12551e0-19c2-4517-901f-5db40496bffe_cat3-removebg-preview.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/e12551e0-19c2-4517-901f-5db40496bffe_cat3-removebg-preview.png",
       "AssetKind": "All",
@@ -606,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\e12551e0-19c2-4517-901f-5db40496bffe_cat3-removebg-preview.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\e65776dd-8d1c-4731-ba69-9f3caceea486_cat4-removebg-preview.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\e65776dd-8d1c-4731-ba69-9f3caceea486_cat4-removebg-preview.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/e65776dd-8d1c-4731-ba69-9f3caceea486_cat4-removebg-preview.png",
       "AssetKind": "All",
@@ -625,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\e65776dd-8d1c-4731-ba69-9f3caceea486_cat4-removebg-preview.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\e9b37130-e888-4fac-bd02-6970f14aa5fa_cat4-removebg-preview.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\e9b37130-e888-4fac-bd02-6970f14aa5fa_cat4-removebg-preview.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/e9b37130-e888-4fac-bd02-6970f14aa5fa_cat4-removebg-preview.png",
       "AssetKind": "All",
@@ -644,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\e9b37130-e888-4fac-bd02-6970f14aa5fa_cat4-removebg-preview.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\efeb3a79-effd-45be-9cda-aed946b2eb72_Untitled design (31).png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\efeb3a79-effd-45be-9cda-aed946b2eb72_Untitled design (31).png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/efeb3a79-effd-45be-9cda-aed946b2eb72_Untitled design (31).png",
       "AssetKind": "All",
@@ -663,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\efeb3a79-effd-45be-9cda-aed946b2eb72_Untitled design (31).png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\f866c778-bbdd-4ca8-9109-97f0db1a3954_pot-of-gold.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\f866c778-bbdd-4ca8-9109-97f0db1a3954_pot-of-gold.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/f866c778-bbdd-4ca8-9109-97f0db1a3954_pot-of-gold.png",
       "AssetKind": "All",
@@ -682,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\f866c778-bbdd-4ca8-9109-97f0db1a3954_pot-of-gold.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\fd32bac3-2c3e-489a-ab95-f6f53d4ff574_nerds5.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\fd32bac3-2c3e-489a-ab95-f6f53d4ff574_nerds5.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "postpictures/fd32bac3-2c3e-489a-ab95-f6f53d4ff574_nerds5.png",
       "AssetKind": "All",
@@ -701,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\fd32bac3-2c3e-489a-ab95-f6f53d4ff574_nerds5.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\1039_c83a59aa-479f-4065-8aba-02b9487bb224.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\1039_c83a59aa-479f-4065-8aba-02b9487bb224.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/1039_c83a59aa-479f-4065-8aba-02b9487bb224.png",
       "AssetKind": "All",
@@ -720,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\1039_c83a59aa-479f-4065-8aba-02b9487bb224.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_2073f8e0-2167-4e9b-ae01-2ce163ec7c2a.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_2073f8e0-2167-4e9b-ae01-2ce163ec7c2a.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/1053_2073f8e0-2167-4e9b-ae01-2ce163ec7c2a.png",
       "AssetKind": "All",
@@ -739,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\1053_2073f8e0-2167-4e9b-ae01-2ce163ec7c2a.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_87e7cccf-f411-409b-aed1-56e7c3949e38_Screenshot (78).png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_87e7cccf-f411-409b-aed1-56e7c3949e38_Screenshot (78).png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/1053_87e7cccf-f411-409b-aed1-56e7c3949e38_Screenshot (78).png",
       "AssetKind": "All",
@@ -758,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\1053_87e7cccf-f411-409b-aed1-56e7c3949e38_Screenshot (78).png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_a8b87e19-62d6-4395-950c-595843212f41_Screenshot (37).png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_a8b87e19-62d6-4395-950c-595843212f41_Screenshot (37).png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/1053_a8b87e19-62d6-4395-950c-595843212f41_Screenshot (37).png",
       "AssetKind": "All",
@@ -777,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\1053_a8b87e19-62d6-4395-950c-595843212f41_Screenshot (37).png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_b1376a4f-0bdb-4f9d-b924-898b14a39b1d_WIN_20241015_13_01_32_Pro.jpg",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_b1376a4f-0bdb-4f9d-b924-898b14a39b1d_WIN_20241015_13_01_32_Pro.jpg",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/1053_b1376a4f-0bdb-4f9d-b924-898b14a39b1d_WIN_20241015_13_01_32_Pro.jpg",
       "AssetKind": "All",
@@ -796,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\1053_b1376a4f-0bdb-4f9d-b924-898b14a39b1d_WIN_20241015_13_01_32_Pro.jpg"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_b671ad78-5d4b-4f78-8063-2bf91ac91285_WIN_20221102_12_38_06_Pro.jpg",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_b671ad78-5d4b-4f78-8063-2bf91ac91285_WIN_20221102_12_38_06_Pro.jpg",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/1053_b671ad78-5d4b-4f78-8063-2bf91ac91285_WIN_20221102_12_38_06_Pro.jpg",
       "AssetKind": "All",
@@ -815,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\1053_b671ad78-5d4b-4f78-8063-2bf91ac91285_WIN_20221102_12_38_06_Pro.jpg"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_d70e9f9f-371f-435f-99cd-cf12176d44dd.jpg",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_d70e9f9f-371f-435f-99cd-cf12176d44dd.jpg",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/1053_d70e9f9f-371f-435f-99cd-cf12176d44dd.jpg",
       "AssetKind": "All",
@@ -834,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\1053_d70e9f9f-371f-435f-99cd-cf12176d44dd.jpg"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_f47adea3-51cb-4aaa-bd75-7cc0462b2ac8.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_f47adea3-51cb-4aaa-bd75-7cc0462b2ac8.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/1053_f47adea3-51cb-4aaa-bd75-7cc0462b2ac8.png",
       "AssetKind": "All",
@@ -853,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\1053_f47adea3-51cb-4aaa-bd75-7cc0462b2ac8.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_fb113ec2-53b7-4776-bd62-423773a68ffb_WIN_20241015_13_01_32_Pro.jpg",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_fb113ec2-53b7-4776-bd62-423773a68ffb_WIN_20241015_13_01_32_Pro.jpg",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/1053_fb113ec2-53b7-4776-bd62-423773a68ffb_WIN_20241015_13_01_32_Pro.jpg",
       "AssetKind": "All",
@@ -872,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\1053_fb113ec2-53b7-4776-bd62-423773a68ffb_WIN_20241015_13_01_32_Pro.jpg"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_fb5efe69-9853-4680-89f0-b70232ca1d1b_Screenshot (73).png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\1053_fb5efe69-9853-4680-89f0-b70232ca1d1b_Screenshot (73).png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/1053_fb5efe69-9853-4680-89f0-b70232ca1d1b_Screenshot (73).png",
       "AssetKind": "All",
@@ -891,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\1053_fb5efe69-9853-4680-89f0-b70232ca1d1b_Screenshot (73).png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\4_c2c5dad0-eac9-408f-84a4-c03b6cbead19.jpg",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\4_c2c5dad0-eac9-408f-84a4-c03b6cbead19.jpg",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/4_c2c5dad0-eac9-408f-84a4-c03b6cbead19.jpg",
       "AssetKind": "All",
@@ -910,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\4_c2c5dad0-eac9-408f-84a4-c03b6cbead19.jpg"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\4_cb3fb115-6bd9-4be4-88cc-1d46c2ba3e8b.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\4_cb3fb115-6bd9-4be4-88cc-1d46c2ba3e8b.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/4_cb3fb115-6bd9-4be4-88cc-1d46c2ba3e8b.png",
       "AssetKind": "All",
@@ -929,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\4_cb3fb115-6bd9-4be4-88cc-1d46c2ba3e8b.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\4_d6480b57-9a6d-49b0-8ac5-2191aa3b3af6.jpg",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\4_d6480b57-9a6d-49b0-8ac5-2191aa3b3af6.jpg",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/4_d6480b57-9a6d-49b0-8ac5-2191aa3b3af6.jpg",
       "AssetKind": "All",
@@ -948,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\4_d6480b57-9a6d-49b0-8ac5-2191aa3b3af6.jpg"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\53_bd070b93-d110-4c95-ab6f-ecb4f62b71b9.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\53_bd070b93-d110-4c95-ab6f-ecb4f62b71b9.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/53_bd070b93-d110-4c95-ab6f-ecb4f62b71b9.png",
       "AssetKind": "All",
@@ -967,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\53_bd070b93-d110-4c95-ab6f-ecb4f62b71b9.png"
     },
     {
-      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\64_d0acf030-0f63-487d-90b5-b0d2394b02a1.png",
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\64_d0acf030-0f63-487d-90b5-b0d2394b02a1.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
       "BasePath": "_content/SocialMedia.API",
       "RelativePath": "profile-pictures/64_d0acf030-0f63-487d-90b5-b0d2394b02a1.png",
       "AssetKind": "All",

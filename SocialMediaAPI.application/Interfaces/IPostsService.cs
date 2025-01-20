@@ -1,4 +1,5 @@
 ﻿using SocialMediaAPI.domain.entities;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -18,7 +19,10 @@ namespace SocialMediaAPI.Application.Interfaces
         Task<int> GetTotalPostsCountAsync();
 
         // New methods for handling images
-        Task AddImagesToPostAsync(int postId, IEnumerable<string> imagePaths);  // Adds images to a post
-        Task<IEnumerable<Images>> GetImagesByPostIdAsync(int postId);  // Retrieves images for a specific post
+        Task AddImagesToPostAsync(int postId, IEnumerable<string> imagePaths);  
+        Task<IEnumerable<Images>> GetImagesByPostIdAsync(int postId);
+
+        //New method for handling search bar
+        Task<IEnumerable<Posts>> SearchPostsAsync(string query);
     }
 }
