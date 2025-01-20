@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SocialMediaAPI.domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2cfbc706771c796f9b84d70a820098da174b74f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c917322eb64e11d60b16a435ce690cd0483e0d83")]
 [assembly: System.Reflection.AssemblyProductAttribute("SocialMediaAPI.domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SocialMediaAPI.domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
