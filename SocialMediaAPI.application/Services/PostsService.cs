@@ -69,5 +69,10 @@ namespace SocialMediaAPI.Application.Services
         {
             return await _postsRepository.GetImagesByPostIdAsync(postId);
         }
+        public async Task<IEnumerable<Posts>> SearchPostsAsync(string query)
+        {
+            return await _postsRepository.SearchPostsAsync(query);
+        }
+
     }
 }

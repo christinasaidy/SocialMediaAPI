@@ -131,5 +131,19 @@ namespace SocialMediaAPI.Infrastructure.Repositories
                  .Include(img => img.Post.Category)
                 .ToListAsync();
         }
+        public async Task<IEnumerable<Posts>> SearchPostsAsync(string query)
+        {
+            return await _context.Posts
+                .Where(p => p.Title.Contains(query) ||
+                            p.Description.Contains(query) ||
+                            p.Tags.Contains(query) ||
+                            p.Author.UserName.Contains(query))
+                .OrderByDescending(p => p.UpvotesCount)
+                .Include(post => post.Category)
+                .Include(post => post.Images)
+                .Include(post => post.Author)
+                .ToListAsync();
+        }
+
     }
 }

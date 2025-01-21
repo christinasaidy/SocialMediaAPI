@@ -15,6 +15,9 @@ namespace SocialMediaAPI.application.Interfaces
         Task<string?> GetBioByIdAsync(int userId);
         Task<bool> AddBioAsync(int userId, string bio);
         Task<string?> GetProfilePictureByIdAsync(int userId); 
-        Task<bool> AddProfilePictureAsync(int userId, string profilePictureUrl); 
+        Task<bool> AddProfilePictureAsync(int userId, string profilePictureUrl);
+        Task<int> GetPostCountByUserIdAsync(int userId);
+        Task<int> GetCommentCountByUserIdAsync(int userId);
+        Task<int> GetEngagementCountByUserIdAsync(int userId);
     }
 }

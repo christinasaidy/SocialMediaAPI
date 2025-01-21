@@ -74,5 +74,20 @@ namespace SocialMediaAPI.application.Services
         {
             return await _usersRepository.AddProfilePictureAsync(userId, profilePictureUrl);
         }
+
+        public async Task<int> GetPostCountByUserIdAsync(int userId)
+        {
+            return await _usersRepository.GetPostCountByUserIdAsync(userId);
+        }
+
+        public async Task<int> GetCommentCountByUserIdAsync(int userId)
+        {
+            return await _usersRepository.GetCommentCountByUserIdAsync(userId);
+        }
+
+        public async Task<int> GetEngagementCountByUserIdAsync(int userId)
+        {
+            return await _usersRepository.GetEngagementCountByUserIdAsync(userId);
+        }
     }
 }

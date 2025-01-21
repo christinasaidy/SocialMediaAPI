@@ -119,5 +119,30 @@ namespace SocialMediaAPI.infrastructure.Repositories
             await _context.SaveChangesAsync(); // Save changes to the database
             return true; // Indicate success
         }
+
+
+        public async Task<int> GetPostCountByUserIdAsync(int userId)
+        {
+            // Count the number of posts by the user
+            return await _context.Posts
+                .Where(p => p.UserId == userId)
+                .CountAsync();
+        }
+
+        public async Task<int> GetCommentCountByUserIdAsync(int userId)
+        {
+            // Count the number of comments by the user
+            return await _context.Comments
+                .Where(c => c.UserId == userId)
+                .CountAsync();
+        }
+
+        public async Task<int> GetEngagementCountByUserIdAsync(int userId)
+        {
+            // Count the number of votes (upvotes and downvotes) on the user's posts
+            return await _context.Votes
+                .Where(v => _context.Posts.Any(p => p.UserId == userId && p.Id == v.PostId))
+                .CountAsync();
+        }
     }
 }
