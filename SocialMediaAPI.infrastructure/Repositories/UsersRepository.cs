@@ -137,11 +137,19 @@ namespace SocialMediaAPI.infrastructure.Repositories
                 .CountAsync();
         }
 
+        //  public async Task<int> GetEngagementCountByUserIdAsync(int userId)
+        //  {
+        // Count the number of votes (upvotes and downvotes) on the user's posts
+        //    return await _context.Votes
+        //        .Where(v => _context.Posts.Any(p => p.UserId == userId && p.Id == v.PostId))
+        // //         .CountAsync();
+        //  }
+
         public async Task<int> GetEngagementCountByUserIdAsync(int userId)
         {
-            // Count the number of votes (upvotes and downvotes) on the user's posts
+            // Count the number of votes (upvotes and downvotes) cast by the user on any posts
             return await _context.Votes
-                .Where(v => _context.Posts.Any(p => p.UserId == userId && p.Id == v.PostId))
+                .Where(v => v.UserId == userId) // Filter votes by the user
                 .CountAsync();
         }
     }
