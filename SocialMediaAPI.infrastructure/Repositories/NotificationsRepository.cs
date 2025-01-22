@@ -35,9 +35,25 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Notifications
                 .Where(n => n.UserId == userId)
-                .Include(n => n.Recipient) 
+                .Select(n => new Notifications
+                {
+                    Id = n.Id,
+                    UserId = n.UserId,
+                    NotificationType = n.NotificationType,
+                    Message = n.Message,
+                    IsRead = n.IsRead,
+                    CreatedAt = n.CreatedAt,
+                    Recipient = new Users
+                    {
+                        Id = n.Recipient.Id,
+                        UserName = n.Recipient.UserName,
+                        DateJoined = n.Recipient.DateJoined,
+                        ProfilePictureUrl = n.Recipient.ProfilePictureUrl
+                    }
+                })
                 .ToListAsync();
         }
+
 
         public async Task<Notifications> AddNotificationAsync(Notifications notification)
         {

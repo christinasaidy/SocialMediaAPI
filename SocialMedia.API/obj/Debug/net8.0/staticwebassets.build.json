@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+aAJY4m1tho7z2PeYlejIUGRAnlYD0a/2NpU/PsUvMA=",
+  "Hash": "xEgdXwN4/QfImqSan5flcK4Gb+NUwyZMR/1SQpC+9oM=",
   "Source": "SocialMedia.API",
   "BasePath": "_content/SocialMedia.API",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postpictures\\1be4b0be-4219-45ff-b60f-ac951364666f_Screenshot 2023-08-12 180749.png"
+    },
+    {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\1d366d65-3f33-4a9c-b2eb-488c44768c5c_reactfr.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/1d366d65-3f33-4a9c-b2eb-488c44768c5c_reactfr.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\1d366d65-3f33-4a9c-b2eb-488c44768c5c_reactfr.png"
     },
     {
       "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\1f06e955-1a6b-485c-9ad0-9531c3dc6e3a_cat3-removebg-preview.png",
@@ -549,6 +568,25 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\5d8d918f-48f7-406f-b9e7-f8d3ffa036f4_Untitled_design__30_-removebg-preview.png"
     },
     {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\67f5225b-fdb9-4694-9ec6-0e172235bbf3_please-help-me-chores-hand-666101-300x212.webp",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/67f5225b-fdb9-4694-9ec6-0e172235bbf3_please-help-me-chores-hand-666101-300x212.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\67f5225b-fdb9-4694-9ec6-0e172235bbf3_please-help-me-chores-hand-666101-300x212.webp"
+    },
+    {
       "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\6bc402fc-9c07-4f5d-b54a-65d822f3bb6e_Untitled_design__30_-removebg-preview.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
@@ -661,6 +699,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postpictures\\7e1aa280-4847-4cf9-b912-3775fb65eb92_Screenshot 2023-08-12 180749.png"
+    },
+    {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\84bc9f26-dd02-452a-96c4-3bf30a3c2212_IBM_Blue_Gene_P_supercomputer.jpg",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/84bc9f26-dd02-452a-96c4-3bf30a3c2212_IBM_Blue_Gene_P_supercomputer.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\84bc9f26-dd02-452a-96c4-3bf30a3c2212_IBM_Blue_Gene_P_supercomputer.jpg"
     },
     {
       "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\88f758eb-403a-4ced-bd99-95a4993ee873_bee (1).png",

@@ -350,8 +350,59 @@ public class UsersController : ControllerBase
         return Ok(new { ProfilePictureUrl = profilePictureUrl });
     }
 
+    [Authorize] // Requires authentication
+    [HttpGet("{userId}/activity")]
+    public async Task<IActionResult> GetUserActivity(int userId)
+    {
+        // Extract the authenticated user's ID from the token
+        var authenticatedUserIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
 
+        if (string.IsNullOrEmpty(authenticatedUserIdClaim) || !int.TryParse(authenticatedUserIdClaim, out int authenticatedUserId))
+        {
+            return Unauthorized("Invalid token or user ID not found.");
+        }
 
+        // Ensure the authenticated user is requesting their own activity
+        if (authenticatedUserId != userId)
+        {
+            return Forbid("You are not authorized to view this user's activity.");
+        }
 
+        // Fetch counts using the service layer
+        var postCount = await _usersService.GetPostCountByUserIdAsync(userId);
+        var commentCount = await _usersService.GetCommentCountByUserIdAsync(userId);
+        var engagementCount = await _usersService.GetEngagementCountByUserIdAsync(userId);
 
+        // Calculate reputation points
+        const int postWeight = 10; // 10 points per post
+        const int commentWeight = 5; // 5 points per comment
+        const int engagementWeight = 2; // 2 points per engagement
+
+        int reputationPoints = (postCount * postWeight) + (commentCount * commentWeight) + (engagementCount * engagementWeight);
+
+        // Update the user's reputationPoints in the database
+        var user = await _usersService.GetUserByIdAsync(userId);
+        if (user == null)
+        {
+            return NotFound("User not found.");
+        }
+
+        user.ReputationPoints = reputationPoints; // Update the reputationPoints field
+        await _usersService.UpdateUserAsync(user); // Save changes to the database
+
+        // Return the counts and calculated reputation points
+        return Ok(new
+        {
+            PostCount = postCount,
+            CommentCount = commentCount,
+            EngagementCount = engagementCount,
+            ReputationPoints = reputationPoints
+        });
+    }
 }
+
+
+
+
+
+
