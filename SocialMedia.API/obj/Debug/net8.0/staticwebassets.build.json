@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xEgdXwN4/QfImqSan5flcK4Gb+NUwyZMR/1SQpC+9oM=",
+  "Hash": "mSG8GtVki7zsupbdH0HFF4UMkM4sxqDYU1h6rYmkeWA=",
   "Source": "SocialMedia.API",
   "BasePath": "_content/SocialMedia.API",
   "Mode": "Default",
@@ -718,6 +718,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postpictures\\84bc9f26-dd02-452a-96c4-3bf30a3c2212_IBM_Blue_Gene_P_supercomputer.jpg"
+    },
+    {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\88dba3c6-99e2-47d6-870b-f7c6f88c5f67_react-logo@3x.svg",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/88dba3c6-99e2-47d6-870b-f7c6f88c5f67_react-logo@3x.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\88dba3c6-99e2-47d6-870b-f7c6f88c5f67_react-logo@3x.svg"
     },
     {
       "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\88f758eb-403a-4ced-bd99-95a4993ee873_bee (1).png",
