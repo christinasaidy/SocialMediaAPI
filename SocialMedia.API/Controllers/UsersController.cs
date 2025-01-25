@@ -399,6 +399,33 @@ public class UsersController : ControllerBase
             ReputationPoints = reputationPoints
         });
     }
+
+    [Authorize]
+    [HttpPatch("update-username")]
+    public async Task<IActionResult> PatchUsernameAsync([FromBody] string newUsername)
+    {
+        if (string.IsNullOrEmpty(newUsername))
+        {
+            return BadRequest("Username cannot be empty.");
+        }
+
+        var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized("Invalid token or user ID not found.");
+        }
+
+        var isUpdated = await _usersService.PatchUsernameAsync(userId, newUsername);
+
+        if (!isUpdated)
+        {
+            return NotFound("User already exists, use another username.");
+        }
+
+        return Ok("Username updated successfully.");
+    }
+
 }
 
 

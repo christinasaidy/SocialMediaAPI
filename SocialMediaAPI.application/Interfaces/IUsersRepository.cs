@@ -19,5 +19,6 @@ namespace SocialMediaAPI.application.Interfaces
         Task<int> GetPostCountByUserIdAsync(int userId);
         Task<int> GetCommentCountByUserIdAsync(int userId);
         Task<int> GetEngagementCountByUserIdAsync(int userId);
+        Task<bool> PatchUsernameAsync(int userId, string newUsername);
     }
 }

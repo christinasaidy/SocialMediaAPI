@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Zs18ORxkOuQWokRJ34ZswtY2dFg0Rw5bIqNEYM8PamE=",
+  "Hash": "8kKjekodr92BqfTbYUbehyBUwfo6NX6+Q7I+zbsdw/Q=",
   "Source": "SocialMedia.API",
   "BasePath": "_content/SocialMedia.API",
   "Mode": "Default",
@@ -1535,6 +1535,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\profile-pictures\\75_1c2ee968-44d7-4007-9ef3-70016a66b0d3.png"
+    },
+    {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\84_f6db0f44-3f23-4603-9dac-5ba3218729af.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "profile-pictures/84_f6db0f44-3f23-4603-9dac-5ba3218729af.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile-pictures\\84_f6db0f44-3f23-4603-9dac-5ba3218729af.png"
     },
     {
       "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\user-profile-icon-vector-avatar-600nw-2247726673.webp",

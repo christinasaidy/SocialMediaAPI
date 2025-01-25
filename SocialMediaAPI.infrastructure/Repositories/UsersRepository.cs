@@ -46,7 +46,7 @@ namespace SocialMediaAPI.infrastructure.Repositories
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             if (user == null)
             {
-                return false; // User not found
+                return false;
             }
 
             var posts = await _context.Posts.Where(p => p.UserId == userId).ToListAsync();
@@ -76,20 +76,18 @@ namespace SocialMediaAPI.infrastructure.Repositories
         }
 
 
-        // GetBioByIdAsync
         public async Task<string?> GetBioByIdAsync(int userId)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             return user?.Bio;
         }
 
-        // AddBioAsync
         public async Task<bool> AddBioAsync(int userId, string bio)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             if (user == null)
             {
-                return false; // User not found
+                return false; 
             }
 
             user.Bio = bio;
@@ -98,32 +96,29 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return true;
         }
 
-        // New method: GetProfilePictureByIdAsync
         public async Task<string?> GetProfilePictureByIdAsync(int userId)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
-            return user?.ProfilePictureUrl; // Return the profile picture if the user exists, otherwise null
+            return user?.ProfilePictureUrl; 
         }
 
-        // New method: AddProfilePictureAsync
         public async Task<bool> AddProfilePictureAsync(int userId, string profilePictureUrl)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             if (user == null)
             {
-                return false; // User not found
+                return false; 
             }
 
-            user.ProfilePictureUrl = profilePictureUrl; // Update the profile picture
-            _context.Users.Update(user); // Mark the user entity as modified
-            await _context.SaveChangesAsync(); // Save changes to the database
-            return true; // Indicate success
+            user.ProfilePictureUrl = profilePictureUrl; 
+            _context.Users.Update(user); 
+            await _context.SaveChangesAsync(); 
+            return true; 
         }
 
 
         public async Task<int> GetPostCountByUserIdAsync(int userId)
         {
-            // Count the number of posts by the user
             return await _context.Posts
                 .Where(p => p.UserId == userId)
                 .CountAsync();
@@ -131,26 +126,36 @@ namespace SocialMediaAPI.infrastructure.Repositories
 
         public async Task<int> GetCommentCountByUserIdAsync(int userId)
         {
-            // Count the number of comments by the user
             return await _context.Comments
                 .Where(c => c.UserId == userId)
                 .CountAsync();
         }
-
-        //  public async Task<int> GetEngagementCountByUserIdAsync(int userId)
-        //  {
-        // Count the number of votes (upvotes and downvotes) on the user's posts
-        //    return await _context.Votes
-        //        .Where(v => _context.Posts.Any(p => p.UserId == userId && p.Id == v.PostId))
-        // //         .CountAsync();
-        //  }
-
         public async Task<int> GetEngagementCountByUserIdAsync(int userId)
         {
-            // Count the number of votes (upvotes and downvotes) cast by the user on any posts
             return await _context.Votes
-                .Where(v => v.UserId == userId) // Filter votes by the user
+                .Where(v => v.UserId == userId) 
                 .CountAsync();
         }
+        public async Task<bool> PatchUsernameAsync(int userId, string newUsername)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            if (user == null)
+            {
+                return false;
+            }
+
+            // Check if the new username already exists
+            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.UserName == newUsername);
+            if (existingUser != null)
+            {
+                return false;
+            }
+
+            user.UserName = newUsername;
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
     }
 }

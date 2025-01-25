@@ -89,5 +89,11 @@ namespace SocialMediaAPI.application.Services
         {
             return await _usersRepository.GetEngagementCountByUserIdAsync(userId);
         }
+
+        public async Task<bool> PatchUsernameAsync(int userId, string newUsername)
+        {
+            return await _usersRepository.PatchUsernameAsync(userId, newUsername);
+        }
+
     }
 }
