@@ -10,6 +10,7 @@ namespace SocialMediaAPI.application.Interfaces
         Task<bool> DeleteUserAsync(int userId);
         Task<Users?> GetUserByUsernameAsync(string username);
         Task<string?> GetUsernameByIdAsync(int userId);
+        Task<string?> GetEmailByIdAsync(int userId);
         Task<List<Posts>> GetPostsByUserIdAsync(int userId);
         Task<string?> GetBioByIdAsync(int userId);
         Task<bool> AddBioAsync(int userId, string bio);
@@ -19,6 +20,8 @@ namespace SocialMediaAPI.application.Interfaces
         Task<int> GetCommentCountByUserIdAsync(int userId);
         Task<int> GetEngagementCountByUserIdAsync(int userId);
         Task<bool> PatchUsernameAsync(int userId, string newUsername);
+        Task<bool> PatchEmailAsync(int userId, string newEmail);
+
 
     }
 }

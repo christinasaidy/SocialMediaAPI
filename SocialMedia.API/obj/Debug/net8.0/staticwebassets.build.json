@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8kKjekodr92BqfTbYUbehyBUwfo6NX6+Q7I+zbsdw/Q=",
+  "Hash": "OJVFRcmgpPF7l07DFMfa9z1v3u5y9MCAdYyKVe57F94=",
   "Source": "SocialMedia.API",
   "BasePath": "_content/SocialMedia.API",
   "Mode": "Default",
@@ -224,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postpictures\\247fed6d-5499-4359-bc73-38f3dd7f1540_blackvertical.jpg"
+    },
+    {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\2496100c-d5e2-4828-8071-8980d3e8652f_react-logo@3x.svg",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/2496100c-d5e2-4828-8071-8980d3e8652f_react-logo@3x.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\2496100c-d5e2-4828-8071-8980d3e8652f_react-logo@3x.svg"
     },
     {
       "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\2a65fdf6-a906-452b-bc65-c0e58791e652_Untitled design (30).png",

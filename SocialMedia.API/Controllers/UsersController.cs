@@ -169,6 +169,27 @@ public class UsersController : ControllerBase
         return Ok(new { Username = username });
     }
 
+    [Authorize] // Requires authentication
+    [HttpGet("email")]
+    public async Task<IActionResult> GetEmailAsync()
+    {
+        // Extract the user ID from the claims (JWT token)
+        var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized("Invalid token or user ID not found.");
+        }
+
+        // Fetch the username using the userId
+        var email = await _usersService.GetEmailByIdAsync(userId);
+
+        if (email == null)
+            return NotFound("Email not found.");
+
+        return Ok(new { Email = email });
+    }
+
     [Authorize]
     [HttpGet("posts")]
     public async Task<IActionResult> GetPosts() //gets the signed in user posts
@@ -424,6 +445,32 @@ public class UsersController : ControllerBase
         }
 
         return Ok("Username updated successfully.");
+    }
+
+    [Authorize]
+    [HttpPatch("update-email")]
+    public async Task<IActionResult> PatchEmailAsync([FromBody] string newEmail)
+    {
+        if (string.IsNullOrEmpty(newEmail))
+        {
+            return BadRequest("Email cannot be empty.");
+        }
+
+        var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized("Invalid token or user ID not found.");
+        }
+
+        var isUpdated = await _usersService.PatchEmailAsync(userId, newEmail);
+
+        if (!isUpdated)
+        {
+            return NotFound("Email already is taken.");
+        }
+
+        return Ok("Email updated successfully.");
     }
 
 }

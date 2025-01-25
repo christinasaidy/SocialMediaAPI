@@ -66,7 +66,11 @@ namespace SocialMediaAPI.infrastructure.Repositories
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             return user?.UserName;
         }
-
+        public async Task<string?> GetEmailByIdAsync(int userId)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            return user?.Email;
+        }
         public async Task<IEnumerable<Posts>> GetPostsByUserIdAsync(int userId)
         {
             return await _context.Posts
@@ -152,6 +156,27 @@ namespace SocialMediaAPI.infrastructure.Repositories
             }
 
             user.UserName = newUsername;
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<bool> PatchEmailAsync(int userId, string newEmail)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            if (user == null)
+            {
+                return false;
+            }
+
+            // Check if the new user email already exists
+            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == newEmail);
+            if (existingUser != null)
+            {
+                return false;
+            }
+
+            user.Email = newEmail;
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
             return true;
