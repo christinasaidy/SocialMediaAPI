@@ -127,6 +127,14 @@ namespace SocialMedia.API.Controllers
             return NoContent();
         }
 
+        [Authorize]
+        [HttpGet("unread-count")]
+        public async Task<int> UnreadNotificationsCount()
+        {
+            var userId = GetUserIdFromToken();
+            return await _notificationsService.GetUnreadNotificationsCountAsync(userId);
+        }
+
 
         private int GetUserIdFromToken()
         {

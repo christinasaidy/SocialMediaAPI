@@ -15,6 +15,7 @@ namespace SocialMediaAPI.application.Interfaces
         Task<Notifications> UpdateNotificationAsync(Notifications notification);
         Task DeleteNotificationAsync(int id);
         Task MarkAsReadAsync(int id);
+        Task<int> GetUnreadNotificationsCountAsync(int userId);
 
     }
 }

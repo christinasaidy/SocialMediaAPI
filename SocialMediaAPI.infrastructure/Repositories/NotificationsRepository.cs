@@ -33,6 +33,7 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Notifications
                 .Where(n => n.ReceiverID == userId)
+                .OrderByDescending(n => n.CreatedAt) 
                 .Select(n => new Notifications
                 {
                     Id = n.Id,
@@ -79,6 +80,13 @@ namespace SocialMediaAPI.infrastructure.Repositories
                 notification.IsRead = true;
                 await _context.SaveChangesAsync();
             }
+        }
+
+        public async Task<int> GetUnreadNotificationsCountAsync(int userId)
+        {
+            return await _context.Notifications
+                .Where(n => n.ReceiverID == userId && !n.IsRead)
+                .CountAsync();
         }
 
     }
