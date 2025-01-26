@@ -33,9 +33,9 @@ namespace SocialMediaAPI.application.Services
             return await _usersRepository.UpdateUserAsync(user);
         }
 
-        public async Task<bool> DeleteUserAsync(int userId)
+        public async Task<bool> DeleteUserAsync(int userId, string password)
         {
-            return await _usersRepository.DeleteUserAsync(userId);
+            return await _usersRepository.DeleteUserAsync(userId, password);
         }
 
         public async Task<Users?> GetUserByUsernameAsync(string username)
@@ -102,6 +102,9 @@ namespace SocialMediaAPI.application.Services
         {
             return await _usersRepository.PatchEmailAsync(userId, newEmail);
         }
-
+        public async Task<bool> PatchPasswordAsync(int userId, string currentPassword, string newPassword)
+        {
+            return await _usersRepository.PatchPasswordAsync(userId, currentPassword, newPassword);
+        }
     }
 }

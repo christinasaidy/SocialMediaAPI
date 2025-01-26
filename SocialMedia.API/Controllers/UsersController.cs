@@ -2,10 +2,12 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using SocialMedia.API.Resources;
 using SocialMedia.API.Resources.PostResources;
 using SocialMedia.API.Resources.UserResources;
 using SocialMediaAPI.application.Interfaces;
 using SocialMediaAPI.domain.entities;
+using SocialMediaAPI.infrastructure.Repositories;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -128,7 +130,7 @@ public class UsersController : ControllerBase
     }
     [Authorize] // Requires authentication
     [HttpDelete("delete")]
-    public async Task<IActionResult> DeleteAccount()
+    public async Task<IActionResult> DeleteAccount([FromBody] DeleteUserResource request)
     {
         // Extract the user ID from the token
         var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
@@ -138,8 +140,13 @@ public class UsersController : ControllerBase
             return Unauthorized("Invalid token or user ID not found.");
         }
 
+        if (string.IsNullOrEmpty(request.Password))
+        {
+            return BadRequest("Password is required.");
+        }
+
         // Call the service layer to delete the user
-        var isDeleted = await _usersService.DeleteUserAsync(userId);
+        var isDeleted = await _usersService.DeleteUserAsync(userId, request.Password);
 
         if (!isDeleted)
         {
@@ -472,6 +479,32 @@ public class UsersController : ControllerBase
 
         return Ok("Email updated successfully.");
     }
+
+    [Authorize]
+    [HttpPatch("update-password")]
+    public async Task<IActionResult> PatchPasswordAsync([FromBody] UpdatePasswordRequest dto)
+    {
+        var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized("Invalid token or user ID not found.");
+        }
+
+        if (dto.NewPassword != dto.ConfirmPassword)
+        {
+            return BadRequest("New password and confirmation password do not match.");
+        }
+
+        var result = await _usersService.PatchPasswordAsync(userId, dto.CurrentPassword, dto.NewPassword);
+        if (!result)
+        {
+            return BadRequest("Password update failed. Please check your current password.");
+        }
+
+        return Ok("Password updated successfully.");
+    }
+
 
 }
 

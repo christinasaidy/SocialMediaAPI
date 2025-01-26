@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BCrypt.Net;
 
 namespace SocialMediaAPI.infrastructure.Repositories
 {
@@ -41,12 +42,16 @@ namespace SocialMediaAPI.infrastructure.Repositories
             return user;
         }
 
-        public async Task<bool> DeleteUserAsync(int userId)
+        public async Task<bool> DeleteUserAsync(int userId, string password)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             if (user == null)
             {
                 return false;
+            }
+            if (user.Password != password)
+            {
+                return false; // Incorrect password
             }
 
             var posts = await _context.Posts.Where(p => p.UserId == userId).ToListAsync();
@@ -66,6 +71,7 @@ namespace SocialMediaAPI.infrastructure.Repositories
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             return user?.UserName;
         }
+
         public async Task<string?> GetEmailByIdAsync(int userId)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
@@ -75,7 +81,7 @@ namespace SocialMediaAPI.infrastructure.Repositories
         {
             return await _context.Posts
                 .Where(p => p.UserId == userId)
-                .Include(p => p.Images) 
+                .Include(p => p.Images)
                 .ToListAsync();
         }
 
@@ -91,7 +97,7 @@ namespace SocialMediaAPI.infrastructure.Repositories
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             if (user == null)
             {
-                return false; 
+                return false;
             }
 
             user.Bio = bio;
@@ -103,7 +109,7 @@ namespace SocialMediaAPI.infrastructure.Repositories
         public async Task<string?> GetProfilePictureByIdAsync(int userId)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
-            return user?.ProfilePictureUrl; 
+            return user?.ProfilePictureUrl;
         }
 
         public async Task<bool> AddProfilePictureAsync(int userId, string profilePictureUrl)
@@ -111,13 +117,13 @@ namespace SocialMediaAPI.infrastructure.Repositories
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             if (user == null)
             {
-                return false; 
+                return false;
             }
 
-            user.ProfilePictureUrl = profilePictureUrl; 
-            _context.Users.Update(user); 
-            await _context.SaveChangesAsync(); 
-            return true; 
+            user.ProfilePictureUrl = profilePictureUrl;
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
 
@@ -137,7 +143,7 @@ namespace SocialMediaAPI.infrastructure.Repositories
         public async Task<int> GetEngagementCountByUserIdAsync(int userId)
         {
             return await _context.Votes
-                .Where(v => v.UserId == userId) 
+                .Where(v => v.UserId == userId)
                 .CountAsync();
         }
         public async Task<bool> PatchUsernameAsync(int userId, string newUsername)
@@ -180,6 +186,31 @@ namespace SocialMediaAPI.infrastructure.Repositories
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
             return true;
+        }
+
+        public async Task<bool> PatchPasswordAsync(int userId, string currentPassword, string newPassword)
+        {
+
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            Console.WriteLine($"currentPassword: {currentPassword}");
+            Console.WriteLine($"newPassword: {newPassword}");
+            Console.WriteLine($"userId: {userId}");
+            if (user == null)
+            {
+                return false; // User not found
+            }
+
+            if (user.Password != currentPassword || newPassword is null || newPassword == "")
+            {
+                return false;
+            }
+
+            // Update the user's password in the database
+            user.Password = newPassword;
+
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+            return true; // Password updated successfully
         }
 
     }
