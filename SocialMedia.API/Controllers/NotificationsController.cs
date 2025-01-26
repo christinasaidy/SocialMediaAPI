@@ -58,22 +58,14 @@ namespace SocialMedia.API.Controllers
                 return BadRequest(ModelState);
 
            
-            var userId = GetUserIdFromToken();
-            if (userId == 0)
+            var SenderId = GetUserIdFromToken();
+            if (SenderId == 0)
             {
                 return Unauthorized("User is not authenticated.");
             }
-
-           
-            var recipient = await _usersService.GetUserByIdAsync(userId);
-            if (recipient == null)
-            {
-                return NotFound("Recipient user not found.");
-            }
-
         
             var notification = _mapper.Map<Notifications>(resource);
-            notification.UserId = userId;
+            notification.SenderID = SenderId;
             notification.CreatedAt = DateTime.UtcNow;
 
     
@@ -100,7 +92,7 @@ namespace SocialMedia.API.Controllers
                 return NotFound("Notification not found.");
             }
 
-            if (notification.UserId != userId)
+            if (notification.SenderID != userId)
             {
                 return Unauthorized("You are not authorized to delete this notification.");
             }
@@ -108,6 +100,41 @@ namespace SocialMedia.API.Controllers
             await _notificationsService.DeleteNotificationAsync(id);
             return NoContent();
         }
+
+        [Authorize]
+        [HttpPatch("{id}/mark-as-read")]
+        public async Task<IActionResult> MarkAsRead(int id)
+        {
+            var userId = GetUserIdFromToken();
+
+            if (userId == 0)
+            {
+                return Unauthorized("User is not authenticated.");
+            }
+
+            var notification = await _notificationsService.GetNotificationByIdAsync(id);
+            if (notification == null)
+            {
+                return NotFound("Notification not found.");
+            }
+
+            if (notification.ReceiverID != userId)
+            {
+                return Unauthorized("You are not authorized to update this notification.");
+            }
+
+            await _notificationsService.MarkAsReadAsync(id);
+            return NoContent();
+        }
+
+        [Authorize]
+        [HttpGet("unread-count")]
+        public async Task<int> UnreadNotificationsCount()
+        {
+            var userId = GetUserIdFromToken();
+            return await _notificationsService.GetUnreadNotificationsCountAsync(userId);
+        }
+
 
         private int GetUserIdFromToken()
         {

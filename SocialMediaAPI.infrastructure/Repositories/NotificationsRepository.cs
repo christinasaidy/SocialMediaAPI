@@ -20,36 +20,30 @@ namespace SocialMediaAPI.infrastructure.Repositories
         public async Task<Notifications> GetNotificationByIdAsync(int id)
         {
             return await _context.Notifications
-                .Include(n => n.Recipient)  
                 .FirstOrDefaultAsync(n => n.Id == id);
         }
 
         public async Task<IEnumerable<Notifications>> GetAllNotificationsAsync()
         {
             return await _context.Notifications
-                .Include(n => n.Recipient) 
                 .ToListAsync();
         }
 
         public async Task<IEnumerable<Notifications>> GetNotificationsByUserIdAsync(int userId)
         {
             return await _context.Notifications
-                .Where(n => n.UserId == userId)
+                .Where(n => n.ReceiverID == userId)
+                .OrderByDescending(n => n.CreatedAt) 
                 .Select(n => new Notifications
                 {
                     Id = n.Id,
-                    UserId = n.UserId,
+                    SenderID = n.SenderID,
+                    PostId = n.PostId,
                     NotificationType = n.NotificationType,
                     Message = n.Message,
                     IsRead = n.IsRead,
                     CreatedAt = n.CreatedAt,
-                    Recipient = new Users
-                    {
-                        Id = n.Recipient.Id,
-                        UserName = n.Recipient.UserName,
-                        DateJoined = n.Recipient.DateJoined,
-                        ProfilePictureUrl = n.Recipient.ProfilePictureUrl
-                    }
+                    ReceiverID = n.ReceiverID
                 })
                 .ToListAsync();
         }
@@ -78,5 +72,22 @@ namespace SocialMediaAPI.infrastructure.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+        public async Task MarkAsReadAsync(int id)
+        {
+            var notification = await _context.Notifications.FindAsync(id);
+            if (notification != null)
+            {
+                notification.IsRead = true;
+                await _context.SaveChangesAsync();
+            }
+        }
+
+        public async Task<int> GetUnreadNotificationsCountAsync(int userId)
+        {
+            return await _context.Notifications
+                .Where(n => n.ReceiverID == userId && !n.IsRead)
+                .CountAsync();
+        }
+
     }
 }

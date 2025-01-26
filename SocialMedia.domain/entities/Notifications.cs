@@ -11,7 +11,11 @@ namespace SocialMediaAPI.domain.entities
     {
         public int Id { get; set; } 
 
-        public int UserId { get; set; } 
+        public int SenderID { get; set; } 
+
+        public int ReceiverID { get; set; }
+
+        public int PostId { get; set; }
 
         public string NotificationType { get; set; } = string.Empty; 
 
@@ -21,7 +25,6 @@ namespace SocialMediaAPI.domain.entities
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        [ForeignKey("UserId")]
-        public Users Recipient { get; set; }
+
     }
 }

@@ -41,5 +41,15 @@ namespace SocialMediaAPI.application.Services
         {
             await _notificationsRepository.DeleteNotificationAsync(id);
         }
+
+        public async Task MarkAsReadAsync(int id)
+        {
+            await _notificationsRepository.MarkAsReadAsync(id);
+        }
+
+        public async Task<int> GetUnreadNotificationsCountAsync(int userId)
+        {
+            return await _notificationsRepository.GetUnreadNotificationsCountAsync(userId);
+        }
     }
 }

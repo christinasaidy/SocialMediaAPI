@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5vpgplepACqNCri1Uu834Z4/OKwpNxQLQ0H3AvdhzYA=",
+  "Hash": "52CSFPaEMJHBOPgUst5t3/SSZJjXHdvmuS/EpHyojHo=",
   "Source": "SocialMedia.API",
   "BasePath": "_content/SocialMedia.API",
   "Mode": "Default",
@@ -300,6 +300,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postpictures\\2c67d075-1752-4b26-a5ef-d7673acb1da3_nerds6.png"
+    },
+    {
+      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\2cd51ca4-8453-402a-ab50-d0aec1f56998_Screenshot 2025-01-25 153738.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/2cd51ca4-8453-402a-ab50-d0aec1f56998_Screenshot 2025-01-25 153738.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\2cd51ca4-8453-402a-ab50-d0aec1f56998_Screenshot 2025-01-25 153738.png"
     },
     {
       "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\2f85b8c1-06de-41f9-b0b2-3a4a3f457d50_Screenshot (20).png",
@@ -718,6 +737,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postpictures\\84bc9f26-dd02-452a-96c4-3bf30a3c2212_IBM_Blue_Gene_P_supercomputer.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\88dba3c6-99e2-47d6-870b-f7c6f88c5f67_react-logo@3x.svg",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/88dba3c6-99e2-47d6-870b-f7c6f88c5f67_react-logo@3x.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\88dba3c6-99e2-47d6-870b-f7c6f88c5f67_react-logo@3x.svg"
     },
     {
       "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\88f758eb-403a-4ced-bd99-95a4993ee873_bee (1).png",
@@ -1497,6 +1535,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\profile-pictures\\75_1c2ee968-44d7-4007-9ef3-70016a66b0d3.png"
+    },
+    {
+      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\84_f6db0f44-3f23-4603-9dac-5ba3218729af.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "profile-pictures/84_f6db0f44-3f23-4603-9dac-5ba3218729af.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile-pictures\\84_f6db0f44-3f23-4603-9dac-5ba3218729af.png"
     },
     {
       "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\profile-pictures\\user-profile-icon-vector-avatar-600nw-2247726673.webp",
