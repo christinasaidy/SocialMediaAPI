@@ -62,13 +62,33 @@ namespace SocialMediaAPI.Infrastructure.Repositories
 
         public async Task DeletePostAsync(int id)
         {
+            // Retrieve the post with the given id
             var post = await _context.Posts.FindAsync(id);
             if (post != null)
             {
+                // Delete votes associated with the post
+                var votes = await _context.Votes.Where(v => v.PostId == id).ToListAsync();
+                if (votes.Any())
+                {
+                    _context.Votes.RemoveRange(votes);
+                }
+
+                // Delete comments associated with the post
+                var comments = await _context.Comments.Where(c => c.PostId == id).ToListAsync();
+                if (comments.Any())
+                {
+                    _context.Comments.RemoveRange(comments);
+                }
+
+                // Delete the post itself
                 _context.Posts.Remove(post);
+
+                // Save all changes
                 await _context.SaveChangesAsync();
             }
         }
+
+
 
         public async Task<IEnumerable<Posts>> GetPostsSortedByUpvotesAsync(int count)
         {

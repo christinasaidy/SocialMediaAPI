@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "z6/xYksgFN+f7kBbUfRNt7mCwsuoKLQx+GjtIOQTVn0=",
+=======
+  "Hash": "rmFNXcvTDuHweYMgoU6e1sdAfmSXhTfcqzmyjWGNx9I=",
+>>>>>>> 2efece8f579acf8f0324f304b286050a170c0e9c
   "Source": "SocialMedia.API",
   "BasePath": "_content/SocialMedia.API",
   "Mode": "Default",
@@ -1176,7 +1180,30 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\c99de3d8-d499-44da-a18a-ecdd538909fe_c#.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\d840f53b-237f-4da1-bd43-e0e9677702d5_Screenshot 2023-08-12 175431.png",
+=======
+      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\d621051b-e8b1-4ecb-874c-a21adabdcf3d_cat3-removebg-preview.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/d621051b-e8b1-4ecb-874c-a21adabdcf3d_cat3-removebg-preview.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\d621051b-e8b1-4ecb-874c-a21adabdcf3d_cat3-removebg-preview.png"
+    },
+    {
+      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\d840f53b-237f-4da1-bd43-e0e9677702d5_Screenshot 2023-08-12 175431.png",
+>>>>>>> 2efece8f579acf8f0324f304b286050a170c0e9c
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
