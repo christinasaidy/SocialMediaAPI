@@ -48,6 +48,10 @@ namespace SocialMediaAPI.application.Services
             var user = await _usersRepository.GetUserByIdAsync(userId);
             return user?.UserName;
         }
+        public async Task<string?> GetEmailByIdAsync(int userId)
+        {
+            return await _usersRepository.GetEmailByIdAsync(userId);
+        }
 
         public async Task<List<Posts>> GetPostsByUserIdAsync(int userId)
         {
@@ -89,5 +93,15 @@ namespace SocialMediaAPI.application.Services
         {
             return await _usersRepository.GetEngagementCountByUserIdAsync(userId);
         }
+
+        public async Task<bool> PatchUsernameAsync(int userId, string newUsername)
+        {
+            return await _usersRepository.PatchUsernameAsync(userId, newUsername);
+        }
+        public async Task<bool> PatchEmailAsync(int userId, string newEmail)
+        {
+            return await _usersRepository.PatchEmailAsync(userId, newEmail);
+        }
+
     }
 }

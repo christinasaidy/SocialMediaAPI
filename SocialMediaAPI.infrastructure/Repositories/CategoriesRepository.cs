@@ -38,10 +38,21 @@ namespace SocialMediaAPI.infrastructure.Repositories
 
         public async Task<Categories> UpdateCategoryAsync(Categories category)
         {
-            _context.Categories.Update(category);
+            // Ensure the entity is tracked
+            var existingCategory = await _context.Categories.FindAsync(category.Id);
+
+            if (existingCategory == null)
+                return null;
+
+            // Update properties explicitly
+            existingCategory.Name = category.Name;
+
+            // Save changes
             await _context.SaveChangesAsync();
-            return category; 
+
+            return existingCategory;
         }
+
 
         public async Task DeleteCategoryAsync(int id)
         {

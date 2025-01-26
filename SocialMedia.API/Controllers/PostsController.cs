@@ -208,7 +208,17 @@ namespace SocialMedia.API.Controllers
                 return Unauthorized("You are not authorized to update this post.");
             }
 
+            var category = await _categoryService.GetCategoryByNameAsync(postUpdateDto.CategoryName);
+
+            if (category == null)
+            {
+                return NotFound($"Category '{postUpdateDto.CategoryName}' not found.");
+            }
+
+
             _mapper.Map(postUpdateDto, post);
+            post.CategoryId = category.Id;
+            post.Category = category; 
             post.UpdatedAt = DateTime.UtcNow;
 
             var updatedPost = await _postsService.UpdatePostAsync(post);
