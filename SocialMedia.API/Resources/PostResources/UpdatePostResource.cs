@@ -2,10 +2,10 @@
 {
     public class UpdatePostResource
     {
-        public string Title { get; set; } = string.Empty;  
-        public string Description { get; set; } = string.Empty;  
-        public string Tags { get; set; } = string.Empty; 
+        public string Title { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public string Tags { get; set; } = string.Empty;
         public string CategoryName { get; set; } = string.Empty;
-      //  public List<string> ImagePaths { get; set; } = new List<string>();
+        //  public List<string> ImagePaths { get; set; } = new List<string>();
     }
 }
