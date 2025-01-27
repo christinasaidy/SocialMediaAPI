@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rmFNXcvTDuHweYMgoU6e1sdAfmSXhTfcqzmyjWGNx9I=",
+  "Hash": "mnpUXwA8tl9t+n3Dv6/k1Y/04u2ImCUav+erxXeYfBs=",
   "Source": "SocialMedia.API",
   "BasePath": "_content/SocialMedia.API",
   "Mode": "Default",
@@ -623,6 +623,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postpictures\\5d8d918f-48f7-406f-b9e7-f8d3ffa036f4_Untitled_design__30_-removebg-preview.png"
+    },
+    {
+      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\665d2ea8-02a8-41be-bf7b-9e1d0b8bcf58_Nerds (1).png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/665d2ea8-02a8-41be-bf7b-9e1d0b8bcf58_Nerds (1).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\665d2ea8-02a8-41be-bf7b-9e1d0b8bcf58_Nerds (1).png"
     },
     {
       "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\67f5225b-fdb9-4694-9ec6-0e172235bbf3_please-help-me-chores-hand-666101-300x212.webp",

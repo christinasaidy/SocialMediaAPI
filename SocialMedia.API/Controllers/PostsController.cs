@@ -218,7 +218,7 @@ namespace SocialMedia.API.Controllers
 
             _mapper.Map(postUpdateDto, post);
             post.CategoryId = category.Id;
-            post.Category = category; 
+            post.Category = category;
             post.UpdatedAt = DateTime.UtcNow;
 
             var updatedPost = await _postsService.UpdatePostAsync(post);
@@ -231,6 +231,7 @@ namespace SocialMedia.API.Controllers
             var updatedPostResource = _mapper.Map<PostResource>(updatedPost);
             return Ok(updatedPostResource);
         }
+
 
         [HttpGet("top")]
         public async Task<IActionResult> GetTopPostsByUpvotes([FromQuery] int count = 5)
