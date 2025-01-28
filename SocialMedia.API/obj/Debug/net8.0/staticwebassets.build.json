@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6N8X9YTxpbNGpph6TwEfHt1x2eggFStzbSj29WgLeoc=",
+  "Hash": "LsXsdFtXAGrx7mPISsrLrSMMiIJixxgLsjXIlE78gk0=",
   "Source": "SocialMedia.API",
   "BasePath": "_content/SocialMedia.API",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postpictures\\0e4fb3f9-040a-4aaa-b5e6-cd3c29076c43_Untitled design (13).png"
+    },
+    {
+      "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\10bc6187-a539-4544-b2ab-2c996cb172f5_nerds4.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/10bc6187-a539-4544-b2ab-2c996cb172f5_nerds4.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\10bc6187-a539-4544-b2ab-2c996cb172f5_nerds4.png"
     },
     {
       "Identity": "C:\\Users\\saidy\\source\\repos\\SocialMediatest\\SocialMedia.API\\wwwroot\\postpictures\\1322ee29-3e28-412f-b590-7f8cc203c6ea_api.png",

@@ -157,9 +157,10 @@ namespace SocialMediaAPI.Infrastructure.Repositories
                 .Where(p => p.Title.Contains(query) ||
                             p.Description.Contains(query) ||
                             p.Tags.Contains(query) ||
-                            p.Author.UserName.Contains(query))
+                            p.Author.UserName.Contains(query) ||
+                            _context.Categories.Any(c => c.Id == p.CategoryId && c.Name.Contains(query)))
                 .OrderByDescending(p => p.UpvotesCount)
-                .Include(post => post.Category)
+                .Include(post => post.Category) 
                 .Include(post => post.Images)
                 .Include(post => post.Author)
                 .ToListAsync();
