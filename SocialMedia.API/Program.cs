@@ -17,6 +17,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add AutoMapper with the MappingProfile
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+builder.Configuration.AddUserSecrets<Program>();
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

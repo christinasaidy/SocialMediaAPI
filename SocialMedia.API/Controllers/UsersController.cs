@@ -18,11 +18,12 @@ public class UsersController : ControllerBase
 {
     private readonly IUsersService _usersService;
     private readonly IMapper _mapper;
-
-    public UsersController(IUsersService usersService, IMapper mapper)
+    private readonly IConfiguration _configuration;
+    public UsersController(IUsersService usersService, IMapper mapper, IConfiguration configuration)
     {
         _usersService = usersService;
         _mapper = mapper;
+        _configuration = configuration;
     }
 
     [HttpPost("signin")]
@@ -34,9 +35,11 @@ public class UsersController : ControllerBase
 
         var user = _mapper.Map<Users>(signInResource);
 
+        // Retrieve the user from the database
         var userFromDb = await _usersService.GetUserByUsernameAsync(user.UserName);
 
-        if (userFromDb == null || userFromDb.Password != user.Password)
+        // Check if the user exists and the password matches
+        if (userFromDb == null || !BCrypt.Net.BCrypt.Verify(user.Password, userFromDb.Password))
             return Unauthorized("Invalid username or password");
 
         // Generate JWT token here
@@ -47,27 +50,23 @@ public class UsersController : ControllerBase
         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
     };
 
-        var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("YourSuperSecretKey12345111111111")); 
+        var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
         var credentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
 
         var token = new JwtSecurityToken(
-            issuer: "http://localhost:5128", 
-            audience: "http://localhost:3000", 
+            issuer: "http://localhost:5128",
+            audience: "http://localhost:3000",
             claims: claims,
-            expires: DateTime.UtcNow.AddHours(5), 
+            expires: DateTime.UtcNow.AddHours(5),
             signingCredentials: credentials
         );
-        Console.WriteLine($"Token expiration: {token.ValidTo}");
-
 
         var tokenHandler = new JwtSecurityTokenHandler();
-        var jwtToken = tokenHandler.WriteToken(token); // Serialize the JWT token
-        Console.WriteLine("Generated Token: " + jwtToken);
+        var jwtToken = tokenHandler.WriteToken(token);
 
-        //return token 
+        // Return the token
         return Ok(new { Token = jwtToken });
     }
-
 
     [HttpPost("signup")]
     [AllowAnonymous] // Explicitly allow unauthenticated users
@@ -83,6 +82,9 @@ public class UsersController : ControllerBase
         if (existingUser != null)
             return Conflict("Username already exists");
 
+        // Hash the user's password before saving it
+        user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+
         // Create the new user
         var createdUser = await _usersService.CreateUserAsync(user);
 
@@ -94,7 +96,7 @@ public class UsersController : ControllerBase
         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
     };
 
-        var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("YourSuperSecretKey12345111111111"));
+        var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
         var credentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
 
         var token = new JwtSecurityToken(
@@ -115,6 +117,7 @@ public class UsersController : ControllerBase
             Token = jwtToken
         });
     }
+
 
 
     // Fetch User Profile (Requires Authentication)

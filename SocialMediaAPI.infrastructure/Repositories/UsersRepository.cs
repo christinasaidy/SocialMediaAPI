@@ -47,19 +47,34 @@ namespace SocialMediaAPI.infrastructure.Repositories
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             if (user == null)
             {
-                return false;
+                return false; // User not found
             }
-            if (user.Password != password)
+
+            // Verify the provided password against the stored hashed password
+            if (!BCrypt.Net.BCrypt.Verify(password, user.Password))
             {
                 return false; // Incorrect password
             }
 
+            // Delete all votes associated with the user's posts
             var posts = await _context.Posts.Where(p => p.UserId == userId).ToListAsync();
+            foreach (var post in posts)
+            {
+                var votes = await _context.Votes.Where(v => v.PostId == post.Id).ToListAsync();
+                Console.WriteLine($"post: {post}");
+                _context.Votes.RemoveRange(votes); // Remove the votes first
+            }
+
+            // Remove all posts by the user
             _context.Posts.RemoveRange(posts);
+
+            // Remove the user
             _context.Users.Remove(user);
             await _context.SaveChangesAsync();
-            return true;
+
+            return true; // User deleted successfully
         }
+
 
         public async Task<Users?> GetUserByUsernameAsync(string username)
         {
@@ -190,28 +205,29 @@ namespace SocialMediaAPI.infrastructure.Repositories
 
         public async Task<bool> PatchPasswordAsync(int userId, string currentPassword, string newPassword)
         {
-
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
-            Console.WriteLine($"currentPassword: {currentPassword}");
-            Console.WriteLine($"newPassword: {newPassword}");
-            Console.WriteLine($"userId: {userId}");
+
             if (user == null)
             {
                 return false; // User not found
             }
 
-            if (user.Password != currentPassword || newPassword is null || newPassword == "")
+            // Verify current password
+            if (!BCrypt.Net.BCrypt.Verify(currentPassword, user.Password) || string.IsNullOrWhiteSpace(newPassword))
             {
-                return false;
+                return false; // Current password is incorrect or new password is invalid
             }
 
-            // Update the user's password in the database
-            user.Password = newPassword;
+            // Hash the new password
+            user.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
 
+            // Update the user's password in the database
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
+
             return true; // Password updated successfully
         }
+
 
     }
 }

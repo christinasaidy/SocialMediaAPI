@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DbB621cwpF1OfxJAL98bw4YQHNAcOEqFbHJYtWKJ5Dg=",
+  "Hash": "4O3CuCLbLkVe9RLMZFfYDHyzUxLbpKqvww+6TzB/6II=",
   "Source": "SocialMedia.API",
   "BasePath": "_content/SocialMedia.API",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postpictures\\14cee4c7-0ac4-4afb-bc96-55e141a01313_pfp.png"
+    },
+    {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\168b8bfd-de79-47d9-8ce4-d204db1a3d47_Unofficial_JavaScript_logo_2.svg.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/168b8bfd-de79-47d9-8ce4-d204db1a3d47_Unofficial_JavaScript_logo_2.svg.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\168b8bfd-de79-47d9-8ce4-d204db1a3d47_Unofficial_JavaScript_logo_2.svg.png"
     },
     {
       "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\1a197cf8-6572-4df9-9155-76912256c188_api2.png",
@@ -1176,6 +1195,25 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\9a2732d3-657a-40e9-95b1-2ef8e600474b_Screenshot 2024-11-30 174333.png"
     },
     {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\9bb30fca-796b-4f6e-b719-d352dd2f0ecf_angular-logo-png_seeklogo-272813.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/9bb30fca-796b-4f6e-b719-d352dd2f0ecf_angular-logo-png_seeklogo-272813.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\9bb30fca-796b-4f6e-b719-d352dd2f0ecf_angular-logo-png_seeklogo-272813.png"
+    },
+    {
       "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\9dc34db0-a64f-4adc-b9b8-7f1b4bd5a89b_Screenshot 2023-08-12 180749.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
@@ -1252,6 +1290,25 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\a7a083a3-8ad9-47b2-93a5-c89354d02cd3_api.png"
     },
     {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\af5c93aa-6ddf-4f44-b17f-189b71f26c3a_arcade-Spreads-Like-Wildfire-2.png",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/af5c93aa-6ddf-4f44-b17f-189b71f26c3a_arcade-Spreads-Like-Wildfire-2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\af5c93aa-6ddf-4f44-b17f-189b71f26c3a_arcade-Spreads-Like-Wildfire-2.png"
+    },
+    {
       "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\b60456a4-133d-4af5-926b-8ac695308ba9_Screenshot 2024-11-30 173422.png",
       "SourceId": "SocialMedia.API",
       "SourceType": "Discovered",
@@ -1307,6 +1364,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postpictures\\bbe5b920-1185-4405-b2eb-e0b656c817f2_c#.png"
+    },
+    {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\bd3c6283-93ab-4733-a3fb-2a7fc93e7227_react-logo@3x.svg",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "postpictures/bd3c6283-93ab-4733-a3fb-2a7fc93e7227_react-logo@3x.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\bd3c6283-93ab-4733-a3fb-2a7fc93e7227_react-logo@3x.svg"
     },
     {
       "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\postpictures\\c072647e-7556-4308-a081-15e9c116bb26_react-logo@3x.svg",
@@ -2029,6 +2105,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\profile-pictures\\84_f6db0f44-3f23-4603-9dac-5ba3218729af.png"
+    },
+    {
+      "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\95_54551335-c011-406e-b9d9-309c0d9b26e6.jpg",
+      "SourceId": "SocialMedia.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\",
+      "BasePath": "_content/SocialMedia.API",
+      "RelativePath": "profile-pictures/95_54551335-c011-406e-b9d9-309c0d9b26e6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile-pictures\\95_54551335-c011-406e-b9d9-309c0d9b26e6.jpg"
     },
     {
       "Identity": "E:\\IDS internship\\Social_Media_Clean_Architecture\\SocialMediaAPI\\SocialMedia.API\\wwwroot\\profile-pictures\\user-profile-icon-vector-avatar-600nw-2247726673.webp",
