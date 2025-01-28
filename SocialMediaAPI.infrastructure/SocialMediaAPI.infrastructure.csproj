@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SocialMedia.domain\SocialMediaAPI.domain.csproj" />
     <ProjectReference Include="..\SocialMediaAPI.application\SocialMediaAPI.application.csproj" />
   </ItemGroup>

@@ -8,7 +8,7 @@ namespace SocialMediaAPI.application.Interfaces
         Task<IEnumerable<Users>> GetAllUsersAsync();
         Task<Users> AddUserAsync(Users user);
         Task<Users> UpdateUserAsync(Users user);
-        Task<bool> DeleteUserAsync(int userId);
+        Task<bool> DeleteUserAsync(int userId, string password);
         Task<Users?> GetUserByUsernameAsync(string username);
         Task<string?> GetUsernameByIdAsync(int userId);
         Task<string?> GetEmailByIdAsync(int userId);
@@ -22,6 +22,8 @@ namespace SocialMediaAPI.application.Interfaces
         Task<int> GetEngagementCountByUserIdAsync(int userId);
         Task<bool> PatchUsernameAsync(int userId, string newUsername);
         Task<bool> PatchEmailAsync(int userId, string newEmail);
+        Task<bool> PatchPasswordAsync(int userId, string currentPassword, string newPassword);
+
 
     }
 }
